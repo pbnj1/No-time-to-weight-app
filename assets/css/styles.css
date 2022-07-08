@@ -1,0 +1,28 @@
+
+
+#meal-input{
+    border: 2px black solid;
+    
+}
+
+#sgst-returned{
+    border: 2px black solid;
+  
+}
+
+#meal-title{
+    text-align: center;
+}
+
+ #meal-submit{
+    text-align:center;
+    float:right;
+} 
+
+#sgst-meals{
+    border:2px black solid;
+}
+
+#sgst-snacks{
+    border:2px black solid;
+} 
