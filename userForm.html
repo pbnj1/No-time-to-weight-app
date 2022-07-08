@@ -43,35 +43,49 @@
           </nav>
       </header>
       <main class="flex justify-center items-center w-screen h-screen">
-        <form class="text-left">
-            <h1>User Form</h1>
-            <div>
-                <p>Please fill out the following form:</p>
-                <label for="name">Full Name</label>
-                <input type="text" placeholder="Enter Full Name" name="name" id="name" required><br>
-    
-                <label for="age">Age</label>
-                <input type="number" placeholder="Enter your age" name="age" id="age" required><br>
-    
-                <label for="height">Height</laberl>
-                <input type="number" placeholder="Enter your height in feet" name="height" id="height" required><br>
-    
-                <label for="weight">Weight</label>
-                <input type="number" placeholder="Enter your weight in pounds" name="weight" id="weight" required><br>
-    
-                <label for="gender">Gender</label>
-                <input type="text" placeholder="Male or Female" name="gender" id="gender" required><br>
-    
-                <p>Please select your fitness goals:</p>
-    
-                <input type="radio" id="lose" name="fit_goal" value="lose">
-                <label for="lose">Lose Weight</label>
-                <input type="radio" id="maintain" name="fit_goal" value="maintain">
-                <label for="maintain">Maintain Weight</label>
-                <input type="radio" id="gain" name="fit_goal" value="gain">
-                <label for="gain">Gain Weight</label><br>
+        <form class="w-8/12 h-4/6 border-2 border-black">
+            <div class="h-1/6 w-11/12 mx-auto flex justify-center items-center">
+                <h1 class="text-5xl text-center">Getting to Know You</h1>
             </div>
-            <input type="submit" value="Submit">
+            <div class="h-4/6 w-11/12 mx-auto text-2xl leading-8">
+                <div>
+                    <label for="name">Full Name</label>
+                    <input type="text" placeholder="First and last" name="name" id="name" required><br>
+                </div>
+                <br>
+                <div>
+                    <label for="age">Age</label>
+                    <input type="number" placeholder="In years" name="age" id="age" required><br>
+                </div>
+                <br>
+                <div>
+                    <label for="height">Height</laberl>
+                    <input type="number" placeholder="In feet" name="height" id="height" required><br>
+                </div>
+                <br>
+                <div>
+                    <label for="weight">Weight</label>
+                    <input type="number" placeholder="In pounds" name="weight" id="weight" required><br>
+                </div>
+                <br>
+                <div>
+                    <label for="gender">Gender</label>
+                    <input type="text" placeholder="Male or female" name="gender" id="gender" required><br>
+                </div>
+                <br>
+                <div>
+                    <label>Goal:</label>
+                    <input type="radio" id="lose" name="fit_goal" value="lose">
+                    <label for="lose">Lose Weight</label>
+                    <input type="radio" id="maintain" name="fit_goal" value="maintain">
+                    <label for="maintain">Maintain Weight</label>
+                    <input type="radio" id="gain" name="fit_goal" value="gain">
+                    <label for="gain">Gain Weight</label><br>
+                </div>
+            </div>
+            <div class="h-1/6 w-8/12 mx-auto flex justify-center items-center">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-20 rounded focus:outline-none focus:shadow-outline" type="submit">Submit</button>
+            </div>
         </form>
       </main>
       <script src="./assets/js/script.js"></script>
