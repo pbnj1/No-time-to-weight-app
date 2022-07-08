@@ -1,0 +1,13 @@
+#meal-form{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#meal-input{
+    border: 2px black solid;
+}
+
+#sgst-returned{
+    border: 2px black solid;
+}
