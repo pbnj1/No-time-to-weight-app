@@ -24,7 +24,7 @@
     </head>
 
     <body>
-        <body>
+        <header>
             <nav class="bg-white shadow-lg">
                 <div class="flex justify-between ml-12 mr-12">
                     <div>
@@ -41,7 +41,42 @@
                     </div>
                 </div>
             </nav>
-        </body>
+        </header>
+
+        <main class="flex justify-center items-center w-screen h-screen">
+            <div class="flex h-3/5 w-3/5 border-2 border-black shadow-xl">
+                <div class="w-1/3 border-2 border-green-600">
+                    <div class="w-full max-w-xs flex justify-center items-center">
+                        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                          <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="exerciseSearch">
+                              Exercise
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exerciseSearch" type="text" placeholder="Ex. Run">
+                          </div>
+                          <div class="mb-6">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="exerciseDuration">
+                              Duration in Minutes
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exerciseDuration" type="number" placeholder="Ex. 30">
+                          </div>
+                          <div class="flex items-center justify-center">
+                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                              Sign In
+                            </button>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="w-2/3 border-2 border-red-600">
+
+                </div>
+            </div>
+        </main>
+
+
+
+
         <script src="./assets/js/script.js"></script>
     </body>     
 
