@@ -20,7 +20,7 @@ also include empty divs for each row to append the data-generated cards
     
 <div id = "meal-form">
     <form action="" class="" id="meal-input">
-        <H1>Meal Form</H1>
+        <H1 id = "meal-title">Meal Form</H1>
         <label for="restrictions"> Special Diet Restrictions?</label> 
         <!-- on click for diet restriction yes selection will display the following diet restriction checkboxes -->
         <input type="radio" id="yes" name="" value="yes">
@@ -112,32 +112,35 @@ also include empty divs for each row to append the data-generated cards
             <br><br> <br>
            
             <label for="Meals">Meals Per Day ?</label>  
-            <input type="text" id="meal-amt" name="">
+            <input type="number" id="meal-amt">
+          
             <br><br><br>
             <label for="Snacks">Snacks Per Day ?</label>  
-            <input type="text" id="snack-amt" name="">
+            <input type="number" id="snack-amt">
             <br>
       <br><br>
-      <input type="submit" value="submint">
+      <input type="submit" value="submit" id="meal-submit">
     </form>
    
+   
+        <div class = "sgst-returned" id="sgst-returned">
+            <div id = "sgst-meals">Meal Suggestions
+                <div id = "meal1">meal</div>
+                <div id = "meal2">meal</div>
+                <div id = "meal3">meal</div>
+                <div id = "meal4">meal</div>
+            </div>
+            
 
-    <div class = "sgst-returned" id="sgst-returned">
-        <div id = "sgst-meals">Meal Suggestions</div>
-            <div id = "meal1"></div>
-            <div id = "meal2"></div>
-            <div id = "meal3"></div>
-            <div id = "meal4"></div>
-          
-
-        <div id = "sgst-snacks">Snack Suggestions</div>
-            <div id = "snack1"></div>
-            <div id = "snack2"></div>
-            <div id = "snack3"></div>
-            <div id = "snack4"></div>
-           
-    </div>
-
+            <div id = "sgst-snacks">Snack Suggestions
+                <div id = "snack1">snack</div>
+                <div id = "snack2">snack</div>
+                <div id = "snack3">snack</div>
+                <div id = "snack4">snack</div>
+            </div>
+            
+        </div>
+   
 </div>
 
   </body>
