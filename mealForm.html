@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>  
+<head>  
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -20,11 +20,19 @@
         rel="stylesheet" 
         href="./assets/css/styles.css" 
         />
-        <title>No Time To Weight</title>
+        <title>Meal Planning</title>
     </head>
 
-    <body>
-        <body>
+  <!-- Create a form with the following inputs...Diet restrictions, Dietary Intolerances, 
+    meals (number input), snacks (number input)
+
+Create a container for suggestions with 2-row divs, one for meals and one for snacks. 
+
+also include empty divs for each row to append the data-generated cards
+ -->
+
+  <body>
+        <header>
             <nav class="bg-white shadow-lg">
                 <div class="flex justify-between ml-12 mr-12">
                     <div>
@@ -41,8 +49,133 @@
                     </div>
                 </div>
             </nav>
-        </body>
-        <script src="./assets/js/script.js"></script>
-    </body>     
+        </header>
 
+  <div id = "meal-form">
+      <form action="" class="" id="meal-input">
+          <H1 id = "meal-title">Meal Form</H1>
+          <label for="restrictions"> Special Diet Restrictions?</label> 
+          <!-- on click for diet restriction yes selection will display the following diet restriction checkboxes -->
+          <input type="radio" id="yes" name="" value="yes">
+          <label for="html">Yes</label>
+          <input type="radio" id="no" name="" value="no">
+          <label for="html">No</label><br>
+
+          <!--options for diet restrictions-->
+          <br><br>
+          <input type = "checkbox" id = "gluten Free" name = "restriction1" value = "gluten Free">
+          <label for="gluten Free">Gluten Free</label>
+
+          <input type = "checkbox" id = "ketogenic" name ="restriction2" value = "ketogenic">
+          <label for="ketogenic">Ketogenic</label>
+
+          <input type = "checkbox" id = "vegetarian" name = "restriction3" value = "vegetarian">
+          <label for="vegetarian">Vegetarian</label>
+
+          <input type = "checkbox" id = "lacto-vegetarian" name = "restrition4" value = "lacto-vegetarian">
+          <label for="lacto-vegetarian">Lacto-Vegetarian</label>
+
+          <input type = "checkbox" id = "ovo-vegetarian" name = "restriction5" value = "ovo-vegetarian">
+          <label for="ovo-vegetarian">Ovo-Vegetarian</label>
+          <br><br>
+
+          <input type = "checkbox" id = "vegan" name = "restriction6" value = "vegan">
+          <label for="vegan">Vegan</label>
+
+          <input type = "checkbox" id = "pescetarian" name = "restriction7" value = "pescetarian">
+          <label for="pescetarian">Pescatarian</label>
+
+          <input type = "checkbox" id = "paleao" name = "restriction8" value = "paleao">
+          <label for="paleao">Paleo</label>
+
+          <input type = "checkbox" id = "primal" name = "restriction9" value = "primal">
+          <label for="primal">Primal</label>
+
+          <input type = "checkbox" id = "whole30" name = "intolerance10" value = "whole30">
+          <label for="whole30">Whole30</label>
+          <br><br><br>
+
+
+          <label for="intolerance"> Food Alergies/Intolerances?</label> 
+          <!-- on click for intolerance yes selection will display the following intolerance checkboxes -->
+          <input type="radio" id="yes" name="" value="yes">
+          <label for="html">Yes</label>
+          <input type="radio" id="no" name="" value="no">
+          <label for="html">No</label><br>
+
+         <!-- options for intolerances -->
+              <br><br>
+              <input type = "checkbox" id = "Dairy" name = "intolerance1" value = "Dairy">
+              <label for="Dairy">Dairy</label>
+
+              <input type = "checkbox" id = "Egg" name = "intolerance2" value = "Egg">
+              <label for="Egg">Egg</label>
+
+              <input type = "checkbox" id = "Gluten" name = "intolerance3" value = "Gluten">
+              <label for="Gluten">Gluten</label>
+
+              <input type = "checkbox" id = "Grain" name = "intolerance4" value = "Grain">
+              <label for="Grain">Grain</label>
+              <br><br>
+
+              <input type = "checkbox" id = "Peanut" name = "intolerance5" value = "Peanut">
+              <label for="Peanut">Peanut</label>
+
+              <input type = "checkbox" id = "Seafood" name = "intolerance6" value = "Seafood">
+              <label for="Seafood">Seafood</label>
+
+              <input type = "checkbox" id = "Sesame" name = "intolerance7" value = "Sesame">
+              <label for="Sesame">Sesame</label>
+
+              <input type = "checkbox" id = "Shellfish" name = "intolerance8" value = "Shellfish">
+              <label for="Shellfish">Shellfish</label>
+              <br><br>
+
+              <input type = "checkbox" id = "Soy" name = "intolerance9" value = "Soy">
+              <label for="Soy">Soy</label>
+
+              <input type = "checkbox" id = "Sulfite" name = "intolerance10" value = "Sulfite">
+              <label for="Sulfite">Sulfite</label>
+
+              <input type = "checkbox" id = "Tree Nut" name = "intolerance11" value = "Tree Nut">
+              <label for="Tree Nut">Tree Nut</label>
+
+              <input type = "checkbox" id = "Wheat" name = "intolerance12" value = "Wheat">
+              <label for="Wheat">Wheat</label>
+              <br><br> <br>
+
+              <label for="Meals">Meals Per Day ?</label>  
+              <input type="number" id="meal-amt">
+
+              <br><br><br>
+              <label for="Snacks">Snacks Per Day ?</label>  
+              <input type="number" id="snack-amt">
+              <br>
+        <br><br>
+        <input type="submit" value="submit" id="meal-submit">
+      </form>
+
+
+          <div class = "sgst-returned" id="sgst-returned">
+              <div id = "sgst-meals">Meal Suggestions
+                  <div id = "meal1">meal</div>
+                  <div id = "meal2">meal</div>
+                  <div id = "meal3">meal</div>
+                  <div id = "meal4">meal</div>
+              </div>
+
+
+              <div id = "sgst-snacks">Snack Suggestions
+                  <div id = "snack1">snack</div>
+                  <div id = "snack2">snack</div>
+                  <div id = "snack3">snack</div>
+                  <div id = "snack4">snack</div>
+              </div>
+
+          </div>
+
+  </div>
+  
+        <script src="./assets/js/script.js"></script>
+  </body>
 </html>
