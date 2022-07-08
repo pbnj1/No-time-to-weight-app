@@ -1,8 +1,4 @@
-#meal-form{
-    display:flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
+
 
 #meal-input{
     border: 2px black solid;
@@ -11,20 +7,17 @@
 
 #sgst-returned{
     border: 2px black solid;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: space-around;
+  
 }
 
 #meal-title{
     text-align: center;
 }
 
-#meal-submit{
+ #meal-submit{
     text-align:center;
     float:right;
-}
+} 
 
 #sgst-meals{
     border:2px black solid;
@@ -32,4 +25,4 @@
 
 #sgst-snacks{
     border:2px black solid;
-}
+} 
