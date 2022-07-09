@@ -18,10 +18,9 @@ function addGoalValue() {
             goalVal.setAttribute('type', 'number');
             goalValEl.append(goalVal);
             goalVal.classList.remove('hidden');
-            goalVal.value = '';
         } else if (goalButtons[i].checked && (goalButtons[i].value === 'maintain')) {
-            goalVal.classList.add('hidden');
             goalVal.value = 0;
+            goalVal.classList.add('hidden');
         }
     }
 }
@@ -36,7 +35,7 @@ function updateUserObject(e){
     userData.height = heightInput.value;
     userData.age = ageInput.value;
     userData.goal[0] = userGoal;
-    userData.goal[1] = goalVal.value;
+    userData.goal[1] = parseInt(goalVal.value);
 
     let userBMRInfo = getBMR();
     let dietCal = getDietCal(userBMRInfo);
@@ -114,12 +113,15 @@ function getDietCal(userBMR) {
 
 // calculates time it will take to achieve user's goal in units of months
 function calcGoalTime(deficit) {
-    let totalCal = 3500 * userData.goal[1];
-    let totalDays = totalCal / deficit;
-    let totalWeeks = totalDays / 7;
-    let totalMonths = totalWeeks / 4
-
-    return totalMonths;
+    if (userData.goal[0] === 'maintain') {
+        return 0;
+    } else {
+        let totalCal = 3500 * userData.goal[1];
+        let totalDays = totalCal / deficit;
+        let totalWeeks = totalDays / 7;
+        let totalMonths = totalWeeks / 4;
+        return totalMonths;
+    }
 }
 
 goalButtons.forEach(item => {
