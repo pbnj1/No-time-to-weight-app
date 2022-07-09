@@ -1,6 +1,9 @@
 var restrictionBTN = document.querySelectorAll('input[name="restrictions"]');
 var restrictionList = document.getElementById("restrictions")
+var allergyBTN = document.querySelectorAll('input[name="allergies"]')
+var allergyList = document.getElementById("allergies")
 
+//restriction radio button click
 function restrictionDisplay(){
     if(document.getElementById("yesR").checked){
         restrictionList.style.display = "block";
@@ -14,9 +17,7 @@ restrictionBTN.forEach(radio =>{
 });
 
 
-var allergyBTN = document.querySelectorAll('input[name="allergies"]')
-var allergyList = document.getElementById("allergies")
-
+//allergy radio button click
 function allergyDisplay(){
     if(document.getElementById("yesA").checked){
         allergyList.style.display = "block";
