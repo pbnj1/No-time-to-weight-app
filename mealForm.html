@@ -50,14 +50,14 @@
           <h1 id="meal-title" class ="block text-gray-700 text-sm font-bold mb-2">Meal Form</h1>
           <label for="restrictions" class ="block text-gray-700 text-sm font-bold mb-2"> Special Diet Restrictions?</label>
           <!-- on click for diet restriction yes selection will display the following diet restriction checkboxes -->
-          <input type="radio" id="yes" name="" value="yes" />
-          <label for="html">Yes</label>
-          <input type="radio" id="no" name="" value="no" />
-          <label for="html">No</label>
+          <input type="radio" id="yes" name="allergies" value="show" />
+          <label for="yes">Yes</label>
+          <input type="radio" id="no" name="allergies" value="hide" />
+          <label for="hide">No</label>
           <br>
-
+      
           <!--options for diet restrictions-->
-          <br />
+          <div id ="allergies">
           <input
             type="checkbox"
             id="gluten Free"
@@ -133,6 +133,7 @@
             value="whole30"
           />
           <label for="whole30">Whole30</label>
+        </div>
           <br /><br /><br />
 
           <label for="intolerance" class ="block text-gray-700 text-sm font-bold mb-2"> Food Allergies/Intolerances?</label>
@@ -267,7 +268,7 @@
                 Next Page
             </button>
         </div>
-
+    <script src="./assets/js/mealForm.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

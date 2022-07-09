@@ -1,8 +1,6 @@
-/* #activity-btn{ */
-    /* float: right; */
-    /* border: 2px black solid; */
-    /* margin-right: 10px; */
-/* } */
+#allergies{
+    display: none;
+}
 
 #meal-input{
     border: 2px green solid;
