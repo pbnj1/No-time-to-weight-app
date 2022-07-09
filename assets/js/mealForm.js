@@ -3,9 +3,10 @@ var restrictionList = document.getElementById("restrictions");
 var allergyBTN = document.querySelectorAll('input[name="allergies"]');
 var allergyList = document.getElementById("allergies");
 
-
-
-
+var mealSxn = document.getElementById("sgst-returned");
+var mealVal = document.querySelector('input[id = "meal-amt"]');
+var snackVal = document.querySelector('input[id = "snack-amt"]');
+var mealBtn = document.getElementById("mealBtn");
 
 //restriction radio button click
 function restrictionDisplay() {
@@ -37,22 +38,12 @@ document.getElementById("activityNxBtn").onclick = function () {
   location.href = "activityForm.html";
 };
 
-
-
-
-var mealSxn = document.getElementById("sgst-returned");
-var mealVal = document.querySelector('input[id = "meal-amt"]');
-var snackVal = document.querySelector('input[id = "snack-amt"]');
-
-
-function exDisplay() {
-    if (mealVal.value === "" || snackVal.value === "") {
-      document.getElementById("meal-amt").focus();
-      document.getElementById("snack-amt").focus();
-      mealSxn.style.display = "none";
-    } else {
-      mealSxn.style.display = "flex";
-    }
+function mealDisplay() {
+  if (mealVal.value === "" || mealVal.value <= 0) {
+    document.getElementById("meal-amt").focus();
+  } else {
+    mealSxn.style.display = "flex";
   }
-  
-  exBTN.addEventListener("click", exDisplay);
+}
+
+mealBtn.addEventListener("click", mealDisplay);
