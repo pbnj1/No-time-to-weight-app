@@ -77,7 +77,11 @@
                 <br>
                 <div>
                     <label for="gender">Gender</label>
-                    <input type="text" placeholder="Male or female" name="gender" id="gender" required><br>
+                    <select name="gender" id="gender" required>
+                        <option value="" disabled selected hidden>Choose Gender...</option>
+                        <option value="male">male</option>
+                        <option value="female">female</option>
+                    </select>
                 </div>
                 <br>
                 <div>
