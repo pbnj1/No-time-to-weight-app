@@ -6,9 +6,6 @@
     display:none;
 }
 
-#meal-input{
-    border: 2px green solid;
-}
 
 #meal-title{
     text-align: center;
@@ -23,7 +20,7 @@
     line-height: 1.6em;
   }
 
-#ex-sgst{
+#sgst-returned{
     display: none;
 }
 
