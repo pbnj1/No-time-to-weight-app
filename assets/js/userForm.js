@@ -18,6 +18,7 @@ function addGoalValue() {
             goalVal.setAttribute('type', 'number');
             goalValEl.append(goalVal);
             goalVal.classList.remove('hidden');
+            goalVal.value = '';
         } else if (goalButtons[i].checked && (goalButtons[i].value === 'maintain')) {
             goalVal.value = 0;
             goalVal.classList.add('hidden');
@@ -29,8 +30,8 @@ function updateUserObject(e){
     e.preventDefault();
     let userGoal = getUserGoal();
 
-    userData.name = nameInput.value;
-    userData.gender = genderInput.value;
+    userData.name = nameInput.value.trim();
+    userData.gender = genderInput.value.trim();
     userData.weight = weightInput.value;
     userData.height = heightInput.value;
     userData.age = ageInput.value;
@@ -49,7 +50,7 @@ function updateUserObject(e){
     userData.deficit = deficit;
     userData.goalTime = goalTime;
 
-    console.log(userData);
+    commitToStorage();
 
     // clears input fields after data has been stored in user object on submit
     nameInput.value = '';
@@ -122,6 +123,10 @@ function calcGoalTime(deficit) {
         let totalMonths = totalWeeks / 4;
         return totalMonths;
     }
+}
+
+function commitToStorage() {
+    localStorage.setItem(userData.name, JSON.stringify(userData));
 }
 
 goalButtons.forEach(item => {
