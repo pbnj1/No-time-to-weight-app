@@ -1,4 +1,5 @@
 let userData = {
+    name: '',
     gender: '', // will be populated on submit of userform
     weight: null, // will be populated on submit of userform
     height: null, // will be populated on submit of userform
