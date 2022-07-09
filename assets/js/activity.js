@@ -5,7 +5,26 @@ function gohome() {
 }
 
 $( function() {
-    var handle = $( "#custom-handle" );
+    var handle = $( "#custom-handle" );    
+    var availableTags = [
+        "Run",
+        "Walk",
+        "Darts",
+        "Shuffleboard",
+        "Raking lawn",
+        "Aerobics",
+        "Stairs",
+        "Steps",
+        "Rowing",
+        "Cycling",
+        "Bicycling",
+      ];
+
+    $( "#exerciseSearch" ).autocomplete({
+        source: availableTags
+      });
+
+    //Assigns current slider value to the slider for user visual
     $( "#slider" ).slider({
         value:30,
         max: 120,
@@ -17,5 +36,6 @@ $( function() {
         }
     });
   } );
+
 
 nextButton.addEventListener("click", gohome)
