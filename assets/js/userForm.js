@@ -28,6 +28,7 @@ function updateUserObject(e){
     e.preventDefault();
     let userGoal = getUserGoal();
 
+    userData.name = nameInput.value;
     userData.gender = genderInput.value;
     userData.weight = weightInput.value;
     userData.height = heightInput.value;
