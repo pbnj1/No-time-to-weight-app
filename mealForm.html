@@ -50,14 +50,14 @@
           <h1 id="meal-title" class ="block text-gray-700 text-sm font-bold mb-2">Meal Form</h1>
           <label for="restrictions" class ="block text-gray-700 text-sm font-bold mb-2"> Special Diet Restrictions?</label>
           <!-- on click for diet restriction yes selection will display the following diet restriction checkboxes -->
-          <input type="radio" id="yes" name="allergies" value="show" />
-          <label for="yes">Yes</label>
-          <input type="radio" id="no" name="allergies" value="hide" />
+          <input type="radio" id="yesR" name="restrictions" value="show" />
+          <label for="show">Yes</label>
+          <input type="radio" id="noR" name="restrictions" value="hide" />
           <label for="hide">No</label>
           <br>
       
           <!--options for diet restrictions-->
-          <div id ="allergies">
+          <div id ="restrictions">
           <input
             type="checkbox"
             id="gluten Free"
@@ -138,13 +138,13 @@
 
           <label for="intolerance" class ="block text-gray-700 text-sm font-bold mb-2"> Food Allergies/Intolerances?</label>
           <!-- on click for intolerance yes selection will display the following intolerance checkboxes -->
-          <input type="radio" id="yes" name="" value="yes" />
-          <label for="html">Yes</label>
-          <input type="radio" id="no" name="" value="no" />
-          <label for="html">No</label>
+          <input type="radio" id="yesA" name="allergies" value="show" />
+          <label for="show">Yes</label>
+          <input type="radio" id="noA" name="allergies" value="hide" />
+          <label for="hide">No</label>
 
           <!-- options for intolerances -->
-          <br /><br />
+          <div id = "allergies"><br /><br />
           <input type="checkbox" id="Dairy" name="intolerance1" value="Dairy" />
           <label for="Dairy">Dairy</label>
 
@@ -223,12 +223,12 @@
           />
           <label for="Wheat">Wheat</label>
        <br>
-          
+      </div>
           <label class ="block text-gray-700 text-sm font-bold mb-2" for="Meals">Meals Per Day ?</label>
-          <input type="number" id="meal-amt" />
+          <input type="number" style = "border: solid" id="meal-amt" />
 
-          <label class ="block text-gray-700 text-sm font-bold mb-2" for="Snacks">Snacks Per Day ?</label>
-          <input type="number" id="snack-amt" />
+          <label class ="block text-gray-700 text-sm font-bold mb-2" for="Snacks" >Snacks Per Day ?</label>
+          <input type="number" style = "border: solid" id="snack-amt" />
        
     
           <div class = "flex items-center justify-center">

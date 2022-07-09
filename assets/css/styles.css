@@ -1,31 +1,15 @@
-#allergies{
+#restrictions{
     display: none;
+}
+
+#allergies{
+    display:none;
 }
 
 #meal-input{
     border: 2px green solid;
-    
 }
-
-/* #sgst-returned{
-    border: 2px black solid;
-    
-} */
 
 #meal-title{
     text-align: center;
 }
-
-/* #meal-submit{
-    text-align:center;
-    float:right;
-} */
-
-/* #sgst-meals{
-    border:2px red solid;
-}
-
-#sgst-snacks{
-    border:2px red solid;
-} */
-
