@@ -1,33 +1,33 @@
-#activity-btn{
+/* #activity-btn{ */
     /* float: right; */
-    border: 2px black solid;
+    /* border: 2px black solid; */
     /* margin-right: 10px; */
-}
+/* } */
 
 #meal-input{
-    border: 2px black solid;
+    border: 2px green solid;
     
 }
 
-#sgst-returned{
+/* #sgst-returned{
     border: 2px black solid;
     
-}
+} */
 
 #meal-title{
     text-align: center;
 }
 
-#meal-submit{
+/* #meal-submit{
     text-align:center;
     float:right;
-}
+} */
 
-#sgst-meals{
-    border:2px black solid;
+/* #sgst-meals{
+    border:2px red solid;
 }
 
 #sgst-snacks{
-    border:2px black solid;
-}
+    border:2px red solid;
+} */
 
