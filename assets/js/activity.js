@@ -39,3 +39,13 @@ $( function() {
 
 
 nextButton.addEventListener("click", gohome)
+
+function exDisplay(){
+    
+document.getElementById("ex-sgst").style.display = "flex";
+console.log((document.querySelector('input[id = "ex-choice"]').value))
+}
+
+
+
+exBTN.addEventListener("click", exDisplay)
