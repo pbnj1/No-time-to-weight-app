@@ -6,9 +6,6 @@
     display:none;
 }
 
-/* #meal-input{
-    border: 2px green solid;
-} */
 
 #meal-title{
     text-align: center;
@@ -23,9 +20,9 @@
     line-height: 1.6em;
   }
 
-/* #sgst-returned{
+#sgst-returned{
     display: none;
-} */
+}
 
 .sidenav {
     height: 100%;
