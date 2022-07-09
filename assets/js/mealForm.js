@@ -29,3 +29,5 @@ function allergyDisplay(){
 allergyBTN.forEach(radio =>{
     radio.addEventListener("click", allergyDisplay)
 })
+
+document.getElementById("activityNxBtn").onclick = function(){location.href = "activityForm.html"}
