@@ -21,23 +21,28 @@
   </head>
 
   <body>
+        
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="./index.html">Home</a>
+        <a href="./userForm.html">User Form</a>
+        <a href="./mealForm.html">Meal Planning</a>
+        <a href="./activityForm.html">Activities</a>
+    </div>
+    
     <header>
-      <nav class="bg-white shadow-lg">
-        <div class="flex justify-between ml-12 mr-12">
-          <div>
-            <a href="#" class="flex items-center py-4 px-2">
-              <img
-                src="./assets/images/hamburgericon.png"
-                alt="Logo"
-                class="h-8 w-8 mr-2"
-              />
-            </a>
-          </div>
-          <div class="flex items-center">
-            <a href="./index.html" class="font-semibold text-gray-500 text-lg"
-              >No Time To Weight</a
-            >
-          </div>
+      <nav class="bg-white shadow-lg h-16">
+        <div class="flex justify-between ml-12 mr-12 h-full">
+            <div class="flex items-center">  
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span> 
+            </div>
+            <div class="flex items-center">
+                <a
+                    href="./index.html"
+                    class="font-semibold text-gray-500 text-lg"
+                    >No Time To Weight</a
+                >
+            </div>
         </div>
       </nav>
     </header>
