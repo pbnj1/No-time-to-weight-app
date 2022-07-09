@@ -8,6 +8,16 @@ $( function() {
     var handle = $( "#custom-handle" );    
     var availableTags = [
         "Run",
+        "Walk",
+        "Darts",
+        "Shuffleboard",
+        "Raking lawn",
+        "Aerobics",
+        "Stairs",
+        "Steps",
+        "Rowing",
+        "Cycling",
+        "Bicycling",
       ];
 
     $( "#exerciseSearch" ).autocomplete({
