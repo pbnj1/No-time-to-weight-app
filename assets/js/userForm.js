@@ -1,3 +1,7 @@
+var modalOverlay = document.getElementById('modalOverlay');
+var modalCloseButton = document.getElementById('modalCloseButton');
+var modalContinueButton = document.getElementById('modalContinueButton');
+var userFormSubmit = document.getElementById('user-form-button');
 let userFormEl = document.getElementById('user-form');
 let nameInput = document.getElementById('name');
 let ageInput = document.getElementById('age');
@@ -9,6 +13,7 @@ let goalValEl = document.getElementById('goal-val');
 let goalVal = document.createElement('input');
 const kilogramPerPound = 0.453592;
 const centimeterPerFoot = 30.48;
+
 
 
 function addGoalValue() {
@@ -133,3 +138,14 @@ goalButtons.forEach(item => {
     item.addEventListener('click', addGoalValue);
 })
 userFormEl.addEventListener('submit', updateUserObject);
+
+userFormSubmit.addEventListener('click', function() {
+    modalOverlay.classList.toggle('hidden')
+    modalOverlay.classList.toggle('flex')
+})    
+modalCloseButton.addEventListener('click', function() {
+    modalOverlay.classList.toggle('flex')
+    modalOverlay.classList.toggle('hidden')
+
+})    
+modalContinueButton.onclick = function(){location.href = "mealForm.html"}
