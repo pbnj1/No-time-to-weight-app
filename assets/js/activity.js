@@ -48,4 +48,18 @@ function exDisplay() {
 
 exBTN.addEventListener("click", exDisplay);
 
-FbfFoXfcu1pqZGL1wfm5ng==s1ZwGIbhzW13ihcu
+var Key = "FbfFoXfcu1pqZGL1wfm5ng==s1ZwGIbhzW13ihcu";
+
+var queryURL = "https://api.api-ninjas.com/v1/caloriesburned?&activity=" + exVal.value;
+
+fetch(queryURL, {
+  headers:{ "X-Api-Key": "FbfFoXfcu1pqZGL1wfm5ng==s1ZwGIbhzW13ihcu"}
+})
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data)
+      });
+
+     
