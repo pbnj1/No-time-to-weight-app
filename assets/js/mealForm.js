@@ -8,6 +8,8 @@ var mealVal = document.querySelector('input[id = "meal-amt"]');
 var snackVal = document.querySelector('input[id = "snack-amt"]');
 var mealBtn = document.getElementById("mealBtn");
 
+var key = "59b01a286ffd4fcfbef4d24209142500";
+
 //restriction radio button click
 function restrictionDisplay() {
   if (document.getElementById("yesR").checked) {
@@ -47,3 +49,23 @@ function mealDisplay() {
 }
 
 mealBtn.addEventListener("click", mealDisplay);
+
+function mealSearch() {
+  $("#meal-suggestions").empty();
+
+  var queryURL =
+    "https://api.spoonacular.com/recipes/complexSearch?apiKey=" + key;
+  {
+    fetch(queryURL, {
+      headers: { "Content-Type": "application/json" },
+    })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data);
+      });
+  }
+}
+
+mealBtn.addEventListener("click", mealSearch);
