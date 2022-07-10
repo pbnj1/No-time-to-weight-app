@@ -1,9 +1,7 @@
 var nextButton = document.getElementById("activityNextPageBtn");
 var exVal = document.querySelector('input[id = "ex-choice"]');
 var Key = "FbfFoXfcu1pqZGL1wfm5ng==s1ZwGIbhzW13ihcu";
-var card1 = document.getElementById("exercise-holder1");
-var card2 = document.getElementById("exercise-holder2");
-var card3 = document.getElementById("ex-sgst");
+var card1 = document.getElementById("suggestions");
 
 function gohome() {
   document.location = "index.html";
@@ -47,13 +45,13 @@ nextButton.addEventListener("click", gohome);
 function exDisplay() {
   if (exVal.value === "") {
     document.getElementById("ex-choice").focus();
-  } else document.getElementById("ex-sgst").style.display = "flex";
+  } else document.getElementById("suggestions").style.display = "flex";
 }
 
 exBTN.addEventListener("click", exDisplay);
 
 function exSearch() {
-  $("#ex-sgst").empty();
+  $("#suggestions").empty();
   var val = $("#slider").slider("value");
   var queryURL =
     "https://api.api-ninjas.com/v1/caloriesburned?&activity=" +
@@ -80,7 +78,7 @@ function exSearch() {
           displayMessage.textContent =
             "We couldn't find that exercise!  Please try again.";
   
-          card3.append(displayMessage);
+          card1.append(displayMessage);
         }
   
 
@@ -97,7 +95,7 @@ function exSearch() {
           " calories doing this for " +
           val +
           " minutes!";
-        card3.append(exercise1);
+        card1.append(exercise1);
       }
     });
 }
