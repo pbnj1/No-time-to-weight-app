@@ -54,8 +54,7 @@ function mealSearch() {
   $("#meal-suggestions").empty();
 
   var queryURL =
-    "https://api.spoonacular.com/recipes/complexSearch?apiKey=" +
-    key;
+    "https://api.spoonacular.com/recipes/complexSearch?apiKey=" + key;
   {
     fetch(queryURL, {
       headers: { "Content-Type": "application/json" },
