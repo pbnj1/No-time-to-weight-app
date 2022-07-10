@@ -8,6 +8,8 @@ var mealVal = document.querySelector('input[id = "meal-amt"]');
 var snackVal = document.querySelector('input[id = "snack-amt"]');
 var mealBtn = document.getElementById("mealBtn");
 
+var key = "59b01a286ffd4fcfbef4d24209142500";
+
 //restriction radio button click
 function restrictionDisplay() {
   if (document.getElementById("yesR").checked) {
@@ -48,38 +50,23 @@ function mealDisplay() {
 
 mealBtn.addEventListener("click", mealDisplay);
 
-
-
-
-
-
-
-
-
-var key =  "59b01a286ffd4fcfbef4d24209142500"
-// "X-Api-Key": "59b01a286ffd4fcfbef4d24209142500"
-
 function mealSearch() {
   $("#meal-suggestions").empty();
-  // var val = $("#slider").slider("value");
-  var queryURL = "https://api.spoonacular.com/recipes/complexSearch?apiKey=" + key;
+
+  var queryURL =
+    "https://api.spoonacular.com/recipes/complexSearch?apiKey=" +
+    key;
   {
-  // "https://api.spoonacular.com/recipes/complexSearch&diet=vegetarian"
-
-  fetch(queryURL, {
-    headers: { "Content-Type": "application/json"}
-    
-  })
-    .then(function (response) {
-      return response.json();
+    fetch(queryURL, {
+      headers: { "Content-Type": "application/json" },
     })
-    .then(function (data) {
-
-
-      console.log(data)
-    })
-  
-  }}
-
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data);
+      });
+  }
+}
 
 mealBtn.addEventListener("click", mealSearch);
