@@ -1,5 +1,6 @@
 var nextButton = document.getElementById("activityNextPageBtn");
 var exVal = document.querySelector('input[id = "ex-choice"]');
+var Key = "FbfFoXfcu1pqZGL1wfm5ng==s1ZwGIbhzW13ihcu";
 
 function gohome() {
   document.location = "index.html";
@@ -48,18 +49,21 @@ function exDisplay() {
 
 exBTN.addEventListener("click", exDisplay);
 
-var Key = "FbfFoXfcu1pqZGL1wfm5ng==s1ZwGIbhzW13ihcu";
 
-var queryURL = "https://api.api-ninjas.com/v1/caloriesburned?&activity=" + exVal.value;
+exBTN.addEventListener("click", exSearch);
 
-fetch(queryURL, {
-  headers:{ "X-Api-Key": "FbfFoXfcu1pqZGL1wfm5ng==s1ZwGIbhzW13ihcu"}
-})
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data)
-      });
+function exSearch(){
+  var val =$('#slider').slider("value")
+  console.log(val)
+  var queryURL = "https://api.api-ninjas.com/v1/caloriesburned?&activity=" + exVal.value + "&duration=" + val;
+  fetch(queryURL, {
+    headers:{ "X-Api-Key": "FbfFoXfcu1pqZGL1wfm5ng==s1ZwGIbhzW13ihcu"}
+  })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data)
+        });
 
-     
+}
