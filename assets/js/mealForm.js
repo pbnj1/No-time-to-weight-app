@@ -47,3 +47,39 @@ function mealDisplay() {
 }
 
 mealBtn.addEventListener("click", mealDisplay);
+
+
+
+
+
+
+
+
+
+var key =  "59b01a286ffd4fcfbef4d24209142500"
+// "X-Api-Key": "59b01a286ffd4fcfbef4d24209142500"
+
+function mealSearch() {
+  $("#meal-suggestions").empty();
+  // var val = $("#slider").slider("value");
+  var queryURL = "https://api.spoonacular.com/recipes/complexSearch?apiKey=" + key;
+  {
+  // "https://api.spoonacular.com/recipes/complexSearch&diet=vegetarian"
+
+  fetch(queryURL, {
+    headers: { "Content-Type": "application/json"}
+    
+  })
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+
+
+      console.log(data)
+    })
+  
+  }}
+
+
+mealBtn.addEventListener("click", mealSearch);
