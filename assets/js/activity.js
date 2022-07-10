@@ -1,4 +1,5 @@
 var nextButton = document.getElementById("activityNextPageBtn")
+var exVal = document.querySelector('input[id = "ex-choice"]')
 
 function gohome() {
     document.location = "index.html"
@@ -40,10 +41,27 @@ $( function() {
 
 nextButton.addEventListener("click", gohome)
 
+
+
+var mealSxn = document.getElementById("sgst-returned");
+var mealVal = document.querySelector('input[id = "meal-amt"]');
+var snackVal = document.querySelector('input[id = "snack-amt"]');
+var mealBtn = document.getElementById("mealBtn");
+
+function mealDisplay() {
+  if (mealVal.value === "" || mealVal.value <= 0) {
+    document.getElementById("meal-amt").focus();
+  } else {
+    mealSxn.style.display = "flex";
+  }
+}
+
+
 function exDisplay(){
-    
-document.getElementById("ex-sgst").style.display = "flex";
-console.log((document.querySelector('input[id = "ex-choice"]').value))
+  if (exVal.value ===""){
+    document.getElementById("ex-choice").focus();
+  }else(document.getElementById("ex-sgst").style.display = "flex")
+
 }
 
 
