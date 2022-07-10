@@ -5,7 +5,8 @@ function gohome() {
 }
 
 $( function() {
-    var handle = $( "#custom-handle" );    
+    var handle = $( "#custom-handle" ); 
+    //List of words able to autocomplete   
     var availableTags = [
         "Run",
         "Walk",
@@ -20,7 +21,8 @@ $( function() {
         "Bicycling",
       ];
 
-    $( "#exerciseSearch" ).autocomplete({
+      //Identifies the id of input to autocomplete
+    $( "#ex-choice" ).autocomplete({
         source: availableTags
       });
 
