@@ -165,8 +165,18 @@ function mealSearch(getAllergies, getDiets, getCals, randomMeal) {
 
 //meal handler, add in parameters/arguments for narrowing the search
 function submitMealHandler() {
-  mealSearch(getAllergies(), getDiets(), getCals(), randomMeal())
+  if (!localStorage.getItem('localUser')) {
+    displayModalMeal();
+  } else {
+    mealSearch(getAllergies(), getDiets(), getCals(), randomMeal())
+  }
 }
 
+function displayModalMeal() {
+  document.getElementById('mealModalOverlay').classList.toggle('hidden');
+  document.getElementById('mealModalOverlay').classList.toggle('flex');
+}
+
+document.getElementById('modalOkButton').onclick = function(){location.href = "userForm.html"}
 mealBtn.addEventListener("click", submitMealHandler);
 
