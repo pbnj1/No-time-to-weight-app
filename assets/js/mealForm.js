@@ -10,6 +10,8 @@ var mealBtn = document.getElementById("mealBtn");
 
 var key = "59b01a286ffd4fcfbef4d24209142500";
 
+
+
 //restriction radio button click
 function restrictionDisplay() {
   if (document.getElementById("yesR").checked) {
@@ -50,11 +52,29 @@ function mealDisplay() {
 
 mealBtn.addEventListener("click", mealDisplay);
 
-function mealSearch() {
+
+function getAllergies() {
+  var allergyParameters = ""
+  var allergyChildren = allergyList.querySelectorAll("input")
+  for (var i = 0; i < allergyChildren.length; i++) {
+    var curElement = allergyChildren[i];
+    // console.log(curElement.value)
+    if (curElement.checked) {
+      // console.log(curElement.checked)
+      allergyParameters += curElement.value + ","
+      }
+    }
+  return allergyParameters
+}
+
+
+
+function mealSearch(getAllergies) {
   $("#meal-suggestions").empty();
 
+
   var queryURL =
-    "https://api.spoonacular.com/recipes/complexSearch?apiKey=" + key;
+    "https://api.spoonacular.com/recipes/complexSearch?apiKey=" + key + "&intolerances=" + getAllergies;
   {
     fetch(queryURL, {
       headers: { "Content-Type": "application/json" },
@@ -68,4 +88,9 @@ function mealSearch() {
   }
 }
 
-mealBtn.addEventListener("click", mealSearch);
+//meal handler, add in parameters/arguments for narrowing the search
+function submitMealHandler() {
+  mealSearch(getAllergies())
+}
+
+mealBtn.addEventListener("click", submitMealHandler);
