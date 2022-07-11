@@ -33,6 +33,7 @@ function addGoalValue() {
 
 function updateUserObject(e){
     e.preventDefault();
+    displayModal();
     localStorage.clear()
     let userGoal = getUserGoal();
 
@@ -69,6 +70,11 @@ function updateUserObject(e){
         goalButtons[i].checked = false;
     }
 }
+
+function displayModal() {
+    modalOverlay.classList.toggle('hidden');
+    modalOverlay.classList.toggle('flex');
+};
 
 function getUserGoal() {
     for (let i = 0; i < goalButtons.length; i++) {
@@ -139,11 +145,7 @@ goalButtons.forEach(item => {
     item.addEventListener('click', addGoalValue);
 })
 userFormEl.addEventListener('submit', updateUserObject);
-
-userFormSubmit.addEventListener('click', function() {
-    modalOverlay.classList.toggle('hidden')
-    modalOverlay.classList.toggle('flex')
-})    
+ 
 modalCloseButton.addEventListener('click', function() {
     modalOverlay.classList.toggle('flex')
     modalOverlay.classList.toggle('hidden')
