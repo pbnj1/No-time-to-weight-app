@@ -13,6 +13,10 @@ var key = "343f56dbf5924e3a8fb4386adb0c682c";
 
 
 
+
+
+
+
 //restriction radio button click
 function restrictionDisplay() {
   if (document.getElementById("yesR").checked) {
@@ -88,7 +92,16 @@ function getDiets() {
 
 function mealSearch(getAllergies, getDiets) {
   $("#meal-suggestions").empty();
+  var userInfo = JSON.parse(localStorage.getItem("localUser"))
+  var dietCal = userInfo.dietCal
+  
+  console.log(userInfo)
+  console.log(userInfo.dietCal)
+  console.log(dietCal)
+  console.log()
+  var maxMealCal = (Math.round(dietCal/mealVal.value))
 
+ console.log(maxMealCal)
 
   var queryURL =
     "https://api.spoonacular.com/recipes/complexSearch?apiKey=" + key + "&intolerances=" + getAllergies + "&diet=" + getDiets;
@@ -111,3 +124,4 @@ function submitMealHandler() {
 }
 
 mealBtn.addEventListener("click", submitMealHandler);
+
