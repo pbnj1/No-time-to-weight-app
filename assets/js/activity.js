@@ -48,6 +48,7 @@ function exDisplay() {
   if (exVal.value === "") {
     document.getElementById("ex-choice").focus();
   } else document.getElementById("suggestions").style.display = "flex";
+         nextButton.style.display = "flex"
 }
 
 exBTN.addEventListener("click", exDisplay);
