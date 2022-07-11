@@ -3,10 +3,11 @@ var restrictionList = document.getElementById("restrictions");
 var allergyBTN = document.querySelectorAll('input[name="allergies"]');
 var allergyList = document.getElementById("allergies");
 
-var mealSxn = document.getElementById("sgst-returned");
+var mealSxn = document.getElementById("meal-suggestions");
 var mealVal = document.querySelector('input[id = "meal-amt"]');
 var snackVal = document.querySelector('input[id = "snack-amt"]');
 var mealBtn = document.getElementById("mealBtn");
+var activityBtn = document.getElementById("activityNxBtn")
 
 var key = "59b01a286ffd4fcfbef4d24209142500";
 
@@ -43,10 +44,11 @@ document.getElementById("activityNxBtn").onclick = function () {
 };
 
 function mealDisplay() {
-  if (mealVal.value === "" || mealVal.value <= 0) {
+  if (mealVal.value <= 0) {
     document.getElementById("meal-amt").focus();
   } else {
     mealSxn.style.display = "flex";
+    activityBtn.style.display ="flex";
   }
 }
 
