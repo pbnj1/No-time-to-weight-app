@@ -33,6 +33,7 @@ function addGoalValue() {
 
 function updateUserObject(e){
     e.preventDefault();
+    localStorage.clear()
     let userGoal = getUserGoal();
 
     userData.name = nameInput.value.trim();
@@ -131,7 +132,7 @@ function calcGoalTime(deficit) {
 }
 
 function commitToStorage() {
-    localStorage.setItem(userData.name, JSON.stringify(userData));
+    localStorage.setItem("localUser", JSON.stringify(userData));
 }
 
 goalButtons.forEach(item => {
