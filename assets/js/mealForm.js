@@ -89,22 +89,21 @@ function getDiets() {
 }
 
 
-
-function mealSearch(getAllergies, getDiets) {
-  $("#meal-suggestions").empty();
+function getCals(){
   var userInfo = JSON.parse(localStorage.getItem("localUser"))
   var dietCal = userInfo.dietCal
-  
-  console.log(userInfo)
-  console.log(userInfo.dietCal)
-  console.log(dietCal)
-  console.log()
   var maxMealCal = (Math.round(dietCal/mealVal.value))
+  
+  return maxMealCal
+}
 
- console.log(maxMealCal)
+
+function mealSearch(getAllergies, getDiets, getCals) {
+  $("#meal-suggestions").empty();
+  
 
   var queryURL =
-    "https://api.spoonacular.com/recipes/complexSearch?apiKey=" + key + "&intolerances=" + getAllergies + "&diet=" + getDiets;
+    "https://api.spoonacular.com/recipes/complexSearch?apiKey=" + key + "&intolerances=" + getAllergies + "&diet=" + getDiets + "&maxCalories=" + getCals;
   {
     fetch(queryURL, {
       headers: { "Content-Type": "application/json" },
@@ -120,7 +119,7 @@ function mealSearch(getAllergies, getDiets) {
 
 //meal handler, add in parameters/arguments for narrowing the search
 function submitMealHandler() {
-  mealSearch(getAllergies(), getDiets())
+  mealSearch(getAllergies(), getDiets(), getCals())
 }
 
 mealBtn.addEventListener("click", submitMealHandler);
