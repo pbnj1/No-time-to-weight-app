@@ -13,6 +13,10 @@ var key = "343f56dbf5924e3a8fb4386adb0c682c";
 
 
 
+
+
+
+
 //restriction radio button click
 function restrictionDisplay() {
   if (document.getElementById("yesR").checked) {
@@ -85,13 +89,21 @@ function getDiets() {
 }
 
 
+function getCals(){
+  var userInfo = JSON.parse(localStorage.getItem("localUser"))
+  var dietCal = userInfo.dietCal
+  var maxMealCal = (Math.round(dietCal/mealVal.value))
+  
+  return maxMealCal
+}
 
-function mealSearch(getAllergies, getDiets) {
+
+function mealSearch(getAllergies, getDiets, getCals) {
   $("#meal-suggestions").empty();
-
+  
 
   var queryURL =
-    "https://api.spoonacular.com/recipes/complexSearch?apiKey=" + key + "&intolerances=" + getAllergies + "&diet=" + getDiets;
+    "https://api.spoonacular.com/recipes/complexSearch?apiKey=" + key + "&intolerances=" + getAllergies + "&diet=" + getDiets + "&maxCalories=" + getCals;
   {
     fetch(queryURL, {
       headers: { "Content-Type": "application/json" },
@@ -107,7 +119,8 @@ function mealSearch(getAllergies, getDiets) {
 
 //meal handler, add in parameters/arguments for narrowing the search
 function submitMealHandler() {
-  mealSearch(getAllergies(), getDiets())
+  mealSearch(getAllergies(), getDiets(), getCals())
 }
 
 mealBtn.addEventListener("click", submitMealHandler);
+
