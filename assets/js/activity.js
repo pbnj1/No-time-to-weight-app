@@ -70,7 +70,7 @@ function exSearch() {
     .then(function (data) {
        
 
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0; i < 5; i++) {
        
         if ((data.length === 0)) {
           var displayMessage = document.createElement("p");

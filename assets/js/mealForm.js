@@ -13,10 +13,6 @@ var key = "1b1f372e75414ed489b35a3ecbbf7187";
 
 
 
-
-
-
-
 //restriction radio button click
 function restrictionDisplay() {
   if (document.getElementById("yesR").checked) {
@@ -104,6 +100,49 @@ function randomMeal(){
 }
 
 
+function renderMeals(data) {
+  // console.log(data.results[0].title)
+  var suggestionBox = document.getElementById("meal-suggestions")
+  suggestionBox.innerHTML = "";
+  for (var i = 0; i < 5; i++) {
+    var recipe = data.results[i];
+    //Create main div for all meal suggestions styling
+    var div = document.createElement("div");
+    div.classList.add("w-full", "h-48", "shadow-lg", "flex", "p-4")
+    suggestionBox.appendChild(div);
+
+
+    // Create two div boxes for styling the images and text seperately
+    var divImg = document.createElement("div");
+    divImg.classList.add("w-1/3", "h-48",)
+    div.appendChild(divImg)
+    var divContent = document.createElement("div");
+    divContent.classList.add("w-2/3", "h-48",)
+    div.appendChild(divContent)
+
+
+    //create specific elements for img div and content div respectivly
+    var img = document.createElement("img");
+    var h1 = document.createElement("h1");
+    var p = document.createElement("p");
+
+    // assign pieces of content values
+    h1.textContent = recipe.title;
+    p.textContent = "testp"
+    img.src = recipe.image
+
+    
+    img.classList.add("w-36", "h-36", "rounded-lg")
+    h1.classList.add("pl-4","pt-4", "text-lg", "font-bold")
+    p.classList.add("pl-4","pt-4",)
+
+    divImg.appendChild(img);
+    divContent.appendChild(h1);
+    divContent.appendChild(p);
+  }
+}
+
+
 function mealSearch(getAllergies, getDiets, getCals, randomMeal) {
   $("#meal-suggestions").empty();
   
@@ -119,6 +158,7 @@ function mealSearch(getAllergies, getDiets, getCals, randomMeal) {
       })
       .then(function (data) {
         console.log(data);
+        renderMeals(data)
       });
   }
 }
