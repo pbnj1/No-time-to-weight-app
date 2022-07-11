@@ -50,7 +50,7 @@
             </nav>
         </header>
         <main class="flex justify-center items-center w-screen h-screen">
-            <!-- if user is found in local storage add these classes: z-0 hidden -->
+            <!-- initial page for user retrieval -->
             <div id="retrieval-page" class="w-8/12 h-4/6 border-2 border-black">
                 <section class="h-4/6 w-11/12 mx-auto flex justify-center items-center">
                     <h1 class="text-5xl text-center">Before we get started, what is your name?</h1>
@@ -65,7 +65,7 @@
                     </div>
                 </form>
             </div>
-            <!-- if user is not found in local storage remove this class: hidden -->
+            <!-- getting started page -->
             <div id="get-started" class="w-8/12 h-4/6 border-2 border-black hidden z-20">
                 <section class="h-5/6 w-11/12 mx-auto flex justify-center items-center">
                     <h1 class="text-5xl text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut animi nulla quos id, dolore accusamus! Nobis accusamus, delectus illum aliquam, cupiditate omnis provident consectetur modi consequatur odit numquam. Repellendus, numquam.</h1>
@@ -75,10 +75,18 @@
                 </div>
             </div>
             <!-- summary page -->
-            <!-- if user is found in local storage remove this class: hidden -->
             <div id="summary-page" class="w-8/12 h-4/6 border-2 border-black hidden z-10">
+                <section class="h-1/6 w-11/12 mx-auto flex justify-center items-center">
+                    <h1 class="text-5xl text-center">Welcome Back <span id="retrieved-user"></span></h1>
+                </section>
                 <section class="h-5/6 w-11/12 mx-auto flex justify-center items-center">
-                    <h1 class="text-5xl text-center">Summary</h1>
+                    <ol class="text-3xl text-center">
+                        <li>Since your goal was to <span id="goal"></span> weight..</li><br>
+                        <li>Your diet should consist of <span id="dietCal"></span> calories</li>
+                        <li>Your exercise should burn <span id="exerciseCal"></span> calories</li>
+                        <li>Your total deficit is <span id="deficit"></span> calories</li>
+                        <li>You will reach your goal in <span id="goalTime"></span> months</li>
+                    </ol>
                 </section>
             </div>
         </main>
