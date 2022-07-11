@@ -9,7 +9,7 @@ var snackVal = document.querySelector('input[id = "snack-amt"]');
 var mealBtn = document.getElementById("mealBtn");
 var activityBtn = document.getElementById("activityNxBtn")
 
-var key = "59b01a286ffd4fcfbef4d24209142500";
+var key = "343f56dbf5924e3a8fb4386adb0c682c";
 
 
 
@@ -69,14 +69,29 @@ function getAllergies() {
   return allergyParameters
 }
 
+function getDiets() {
+  var dietParameters = ""
+  var dietChildren = restrictionList.querySelectorAll("input")
+  for (var i = 0; i < dietChildren.length; i++) {
+    var curElement = dietChildren[i];
+    // console.log(curElement.value)
+    if (curElement.checked) {
+      // console.log(curElement.checked)
+      dietParameters += curElement.value
+      console.log(dietParameters)
+      }
+    }
+  return dietParameters
+}
 
 
-function mealSearch(getAllergies) {
+
+function mealSearch(getAllergies, getDiets) {
   $("#meal-suggestions").empty();
 
 
   var queryURL =
-    "https://api.spoonacular.com/recipes/complexSearch?apiKey=" + key + "&intolerances=" + getAllergies;
+    "https://api.spoonacular.com/recipes/complexSearch?apiKey=" + key + "&intolerances=" + getAllergies + "&diet=" + getDiets;
   {
     fetch(queryURL, {
       headers: { "Content-Type": "application/json" },
@@ -92,7 +107,7 @@ function mealSearch(getAllergies) {
 
 //meal handler, add in parameters/arguments for narrowing the search
 function submitMealHandler() {
-  mealSearch(getAllergies())
+  mealSearch(getAllergies(), getDiets())
 }
 
 mealBtn.addEventListener("click", submitMealHandler);
