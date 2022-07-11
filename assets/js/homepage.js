@@ -1,19 +1,14 @@
 document.getElementById("startBTN").onclick = function(){location.href = "userForm.html"}
 
-function findUser(e) {
-    e.preventDefault();
-    let currentUser = document.getElementById('retrieve-name').value;
-    for (let i = 0; i < localStorage.length; i++) {
-        if (localStorage.key(i) === currentUser) {
-            document.getElementById('retrieval-page').classList.add('z-0', 'hidden');
-            document.getElementById('summary-page').classList.remove('hidden');
-        } else {
-            document.getElementById('retrieval-page').classList.add('z-0', 'hidden');
-            document.getElementById('get-started').classList.remove('hidden');
-        }
+function findUser() {
+    let currentUser = 'localUser';
+    
+    if (localStorage.getItem(currentUser)) {
+        document.getElementById('summary-page').classList.remove('hidden');
+        populateSummary(currentUser);
+    } else {
+        document.getElementById('get-started').classList.remove('hidden');
     }
-
-    populateSummary(currentUser);
 }
 
 function populateSummary(user) {
@@ -35,4 +30,4 @@ function populateSummary(user) {
 
 }
 
-document.getElementById('user-retrieve').addEventListener('submit', findUser);
+document.addEventListener('DOMContentLoaded', findUser);

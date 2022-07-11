@@ -50,21 +50,6 @@
             </nav>
         </header>
         <main class="flex justify-center items-center w-screen h-screen">
-            <!-- initial page for user retrieval -->
-            <div id="retrieval-page" class="w-8/12 h-4/6 border-2 border-black">
-                <section class="h-4/6 w-11/12 mx-auto flex justify-center items-center">
-                    <h1 class="text-5xl text-center">Before we get started, what is your name?</h1>
-                </section>
-                <form id="user-retrieve">
-                    <div class="h-1/6 w-8/12 mx-auto flex justify-center items-center">
-                        <label for="name">Full Name</label>
-                        <input type="text" placeholder="First and last" name="name" id="retrieve-name" required><br>
-                    </div>
-                    <div class="h-1/6 w-8/12 mx-auto flex justify-center items-center">
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-20 rounded focus:outline-none focus:shadow-outline" type="submit">Save</button>
-                    </div>
-                </form>
-            </div>
             <!-- getting started page -->
             <div id="get-started" class="w-8/12 h-4/6 border-2 border-black hidden z-20">
                 <section class="h-5/6 w-11/12 mx-auto flex justify-center items-center">
@@ -77,7 +62,7 @@
             <!-- summary page -->
             <div id="summary-page" class="w-8/12 h-4/6 border-2 border-black hidden z-10">
                 <section class="h-1/6 w-11/12 mx-auto flex justify-center items-center">
-                    <h1 class="text-5xl text-center">Welcome Back <span id="retrieved-user"></span></h1>
+                    <h1 class="text-5xl text-center">Hello <span id="retrieved-user"></span></h1>
                 </section>
                 <section class="h-5/6 w-11/12 mx-auto flex justify-center items-center">
                     <ol class="text-3xl text-center">
