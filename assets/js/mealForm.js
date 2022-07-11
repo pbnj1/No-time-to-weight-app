@@ -9,7 +9,7 @@ var snackVal = document.querySelector('input[id = "snack-amt"]');
 var mealBtn = document.getElementById("mealBtn");
 var activityBtn = document.getElementById("activityNxBtn")
 
-var key = "343f56dbf5924e3a8fb4386adb0c682c";
+var key = "1b1f372e75414ed489b35a3ecbbf7187";
 
 
 
@@ -97,13 +97,19 @@ function getCals(){
   return maxMealCal
 }
 
+function randomMeal(){
+  var random = Math.floor(Math.random() * 10)+1
+ 
+  return random;
+}
 
-function mealSearch(getAllergies, getDiets, getCals) {
+
+function mealSearch(getAllergies, getDiets, getCals, randomMeal) {
   $("#meal-suggestions").empty();
   
 
   var queryURL =
-    "https://api.spoonacular.com/recipes/complexSearch?apiKey=" + key + "&intolerances=" + getAllergies + "&diet=" + getDiets + "&maxCalories=" + getCals;
+    "https://api.spoonacular.com/recipes/complexSearch?apiKey=" + key + "&intolerances=" + getAllergies + "&diet=" + getDiets + "&maxCalories=" + getCals +"&offset=" + randomMeal;
   {
     fetch(queryURL, {
       headers: { "Content-Type": "application/json" },
@@ -119,7 +125,7 @@ function mealSearch(getAllergies, getDiets, getCals) {
 
 //meal handler, add in parameters/arguments for narrowing the search
 function submitMealHandler() {
-  mealSearch(getAllergies(), getDiets(), getCals())
+  mealSearch(getAllergies(), getDiets(), getCals(), randomMeal())
 }
 
 mealBtn.addEventListener("click", submitMealHandler);
