@@ -1,3 +1,11 @@
+:root {
+    --base-color: #89CFF0;
+    --color-1: #406170;
+    --color-2: #D3E8F2;
+    --color-3: #626C70;
+    --color-4: #6CA3BD;
+}
+
 #activityNxBtn{
     display: none;
 }
