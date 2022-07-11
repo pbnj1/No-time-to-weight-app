@@ -33,6 +33,22 @@
         <a href="./activityForm.html">Activities</a>
     </div>
         
+    <div class="bg-black bg-opacity-50 absolute inset-0 hidden justify-center items-center" id="modalOverlay">
+        <div class="bg-gray-200 max-w-sm rounded px-3 py-3 shadow-xl">
+          <div class="flex justify-between">
+            <h3 class="test-lg font-bold">Congratulations!</h3>
+            
+          </div>
+          <div class="mt-2 text-gray-900">
+            <p>You've just completed the first big step, good job! Now press continue if you're ready to move on to the next step.</p>
+          </div>
+          <div class="mt-3 flex justify-center space-x-12">
+            <button class="bg-gray-500 text-white px-3 py-1 rounded hover:bg-gray-600" id="modalCloseButton">Cancel</button>
+            <button class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-700" id="modalContinueButton">Continue</button>
+          </div>
+        </div>
+      </div>
+
       <header>
         <nav class="bg-white shadow-lg h-16">
             <div class="flex justify-between ml-12 mr-12 h-full">
@@ -76,8 +92,12 @@
                 </div>
                 <br>
                 <div>
-                    <label for="gender">Gender</label>
-                    <input type="text" placeholder="Male or female" name="gender" id="gender" required><br>
+                    <label for="gender">Sex:</label>
+                    <select name="gender" id="gender" required>
+                        <option value="" disabled selected hidden>Choose Sex...</option>
+                        <option value="male">male</option>
+                        <option value="female">female</option>
+                    </select>
                 </div>
                 <br>
                 <div>

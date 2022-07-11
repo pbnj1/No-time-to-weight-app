@@ -1,3 +1,8 @@
+#activityNxBtn{
+    display: none;
+}
+
+
 #restrictions{
     display: none;
 }
@@ -6,6 +11,13 @@
     display:none;
 }
 
+#suggestions{
+    display: none;
+}
+
+#activityNextPageBtn{
+    display: none;
+}
 
 #meal-title{
     text-align: center;
@@ -20,7 +32,7 @@
     line-height: 1.6em;
   }
 
-#sgst-returned{
+#meal-suggestions{
     display: none;
 }
 
