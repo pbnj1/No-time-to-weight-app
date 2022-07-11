@@ -30,4 +30,10 @@ function populateSummary(user) {
 
 }
 
+function updateUserInfo() {
+    localStorage.clear();
+    location.href = 'userForm.html';
+}
+
 document.addEventListener('DOMContentLoaded', findUser);
+document.getElementById('update-info').addEventListener('click', updateUserInfo);
