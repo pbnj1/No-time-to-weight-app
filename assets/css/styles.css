@@ -4,6 +4,8 @@
     --color-2: #D3E8F2;
     --color-3: #626C70;
     --color-4: #6CA3BD;
+    --header-font: 'Jost', sans-serif;
+    --body-font: 'Quicksand', sans-serif;
 }
 
 #activityNxBtn{
