@@ -4,8 +4,13 @@
     --color-2: #D3E8F2;
     --color-3: #626C70;
     --color-4: #6CA3BD;
+    --background-color: #f7f9fa;
     --header-font: 'Jost', sans-serif;
     --body-font: 'Quicksand', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
 }
 
 .header-font {
