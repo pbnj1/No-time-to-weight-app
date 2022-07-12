@@ -134,8 +134,8 @@ function renderMeals(data) {
 
     
     img.classList.add("w-36", "h-36", "rounded-lg")
-    h1.classList.add("pl-4","pt-4", "text-lg", "font-bold")
-    p.classList.add("pl-4","pt-4",)
+    h1.classList.add("pl-4","pt-4", "text-lg", "font-bold", "header-font")
+    p.classList.add("pl-4","pt-4", "body-font")
 
     divImg.appendChild(img);
     divContent.appendChild(h1);
