@@ -8,6 +8,14 @@
     --body-font: 'Quicksand', sans-serif;
 }
 
+.header-font {
+    font-family: var(--header-font);
+}
+
+.body-font {
+    font-family: var(--body-font);
+}
+
 #activityNxBtn{
     display: none;
 }
