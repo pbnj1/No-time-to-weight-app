@@ -79,3 +79,22 @@
     font-size: 36px;
     margin-left: 50px;
 }
+
+.demo-wrap{
+    position: relative;
+}
+
+.demo-wrap:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background-image: url(https://t4.ftcdn.net/jpg/04/33/38/31/360_F_433383199_z1mLbi6GTKBmrtauE7sToBWPSfTdkUGa.jpg);
+    background-repeat: no-repeat;
+    background-position: 0% 0;
+    background-size: cover;
+  }
