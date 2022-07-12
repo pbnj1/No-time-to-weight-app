@@ -9,7 +9,7 @@ var snackVal = document.querySelector('input[id = "snack-amt"]');
 var mealBtn = document.getElementById("mealBtn");
 var activityBtn = document.getElementById("activityNxBtn")
 
-var key = "cad842599f3d443fb979be703d616546";
+var key = "59b01a286ffd4fcfbef4d24209142500";
 
 
 
