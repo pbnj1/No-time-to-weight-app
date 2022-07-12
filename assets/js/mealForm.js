@@ -104,42 +104,83 @@ function renderMeals(data) {
   // console.log(data.results[0].title)
   var suggestionBox = document.getElementById("meal-suggestions")
   suggestionBox.innerHTML = "";
-  for (var i = 0; i < 5; i++) {
-    var recipe = data.results[i];
-    //Create main div for all meal suggestions styling
-    var div = document.createElement("div");
-    div.classList.add("w-full", "h-48", "shadow-lg", "flex", "p-4")
-    suggestionBox.appendChild(div);
 
-
-    // Create two div boxes for styling the images and text seperately
-    var divImg = document.createElement("div");
-    divImg.classList.add("w-1/3", "h-48",)
-    div.appendChild(divImg)
-    var divContent = document.createElement("div");
-    divContent.classList.add("w-2/3", "h-48",)
-    div.appendChild(divContent)
-
-
-    
-    //create specific elements for img div and content div respectivly
-    var img = document.createElement("img");
-    var h1 = document.createElement("h1");
-    var p = document.createElement("p");
-
-    // assign pieces of content values
-    h1.textContent = recipe.title;
-    p.textContent = "Calories: " + data.results[i].nutrition.nutrients[0].amount + " kcal"
-    img.src = recipe.image
-
-    
-    img.classList.add("w-36", "h-36", "rounded-lg")
-    h1.classList.add("pl-4","pt-4", "text-lg", "font-bold", "header-font")
-    p.classList.add("pl-4","pt-4", "body-font")
-
-    divImg.appendChild(img);
-    divContent.appendChild(h1);
-    divContent.appendChild(p);
+  if (mealVal.value < 7) {
+    for (var i = 0; i < mealVal.value; i++) {
+      var recipe = data.results[i];
+      //Create main div for all meal suggestions styling
+      var div = document.createElement("div");
+      div.classList.add("w-full", "h-48", "shadow-lg", "flex", "p-4")
+      suggestionBox.appendChild(div);
+  
+  
+      // Create two div boxes for styling the images and text seperately
+      var divImg = document.createElement("div");
+      divImg.classList.add("w-1/3", "h-48",)
+      div.appendChild(divImg)
+      var divContent = document.createElement("div");
+      divContent.classList.add("w-2/3", "h-48",)
+      div.appendChild(divContent)
+  
+  
+      
+      //create specific elements for img div and content div respectivly
+      var img = document.createElement("img");
+      var h1 = document.createElement("h1");
+      var p = document.createElement("p");
+  
+      // assign pieces of content values
+      h1.textContent = recipe.title;
+      p.textContent = "Calories: " + data.results[i].nutrition.nutrients[0].amount + " kcal"
+      img.src = recipe.image
+  
+      
+      img.classList.add("w-36", "h-36", "rounded-lg")
+      h1.classList.add("pl-4","pt-4", "text-lg", "font-bold", "header-font")
+      p.classList.add("pl-4","pt-4", "body-font")
+  
+      divImg.appendChild(img);
+      divContent.appendChild(h1);
+      divContent.appendChild(p);
+    }
+  } else {
+    for (var i = 0; i < 6; i++) {
+      var recipe = data.results[i];
+      //Create main div for all meal suggestions styling
+      var div = document.createElement("div");
+      div.classList.add("w-full", "h-48", "shadow-lg", "flex", "p-4")
+      suggestionBox.appendChild(div);
+  
+  
+      // Create two div boxes for styling the images and text seperately
+      var divImg = document.createElement("div");
+      divImg.classList.add("w-1/3", "h-48",)
+      div.appendChild(divImg)
+      var divContent = document.createElement("div");
+      divContent.classList.add("w-2/3", "h-48",)
+      div.appendChild(divContent)
+  
+  
+      
+      //create specific elements for img div and content div respectivly
+      var img = document.createElement("img");
+      var h1 = document.createElement("h1");
+      var p = document.createElement("p");
+  
+      // assign pieces of content values
+      h1.textContent = recipe.title;
+      p.textContent = "Calories: " + data.results[i].nutrition.nutrients[0].amount + " kcal"
+      img.src = recipe.image
+  
+      
+      img.classList.add("w-36", "h-36", "rounded-lg")
+      h1.classList.add("pl-4","pt-4", "text-lg", "font-bold", "header-font")
+      p.classList.add("pl-4","pt-4", "body-font")
+  
+      divImg.appendChild(img);
+      divContent.appendChild(h1);
+      divContent.appendChild(p);
+    }
   }
 }
 
