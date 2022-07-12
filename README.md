@@ -1,3 +1,53 @@
+# <No-Time-to-Weight>
+
+## Description of this project
+No Time to Weight is a web application that aims to address chronic health and disease burden at the root cause by helping users improve their meal planning and increase their overall activity levels.  Obesity and it's subsequent comorbidities are linked with over 1.5 trillion dollars of healthcare costs annualy.
+
+Not Time to Weight was designed with the intent to allow the user to improve their health, their quality of life, and subsequently reduce overall healthcare burden.  The app will guide the user through a series of questions that will collect individualized data - which will be used create a personal plan to help the user reach their bodyweight goals and recommended daily activity levels.  
+
+## Installation
+
+Utilize this step by step tutorial on how to clone and access the source code provided:
+https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
+
+
+## Usage
+
+1. On the landing page you will be prompted to start your journey
+```md
+![get started button with vegetables in the background](assets/images/landingPage.png)
+```
+
+2. After clicking on the getting started button you will be prompted to enter some data that will be used to calculate your individualized metabolic rate and help you set goals. 
+```md
+![form to input user information](assets/images/gettingToKnowYou.png)
+```
+
+3. Next you will choose from a list of diet restriction and allergies if applicable, as well as how many meals per day you eat.  
+```md
+![form to input meal choices](assets/images/mealForm.png)
+```
+
+4 Next you will choose what type of exercise you would like to perform and for what duration to determine how that will impact your overall caloric expenditure. 
+```md
+![form to input exercise choices](assets/images/activitylForm.png)
+```
+
+5. Finally you will reach a summary page where you will get a description of your goal, the calories you should consume and use through exercise to meet your goals and a timeframe that this will happen in.   
+```md
+![form to input meal choices](assets/images/summaryPage.png)
+```
+
+## Credits
+Dalian Grullon
+Diego Vargas
+Lorenzo Ferri
+Pete Wang
+
+
+
+
+
 ## User Story
 
 ```
@@ -35,9 +85,5 @@ Javascript, HTML, Jquery
 ## Link to Deployed Application
  https://pbnj1.github.io/No-time-to-weight-app/
 
-## Description of this project
-No Time to Weight is a web application that aims to address chronic health and disease burden at the root cause by helping users improve and meal their planning and increase thier overall activity levels.  The app will guide the user through a series of questions that will collect individualized data - which will be used create a personal plan to help the user reach their bodyweight goals and recommended daily activity levels.  
- 
-## Screenshot of the application landing page
 
-![Screen Shot 2022-07-12 at 12 56 27 PM](https://user-images.githubusercontent.com/105159702/178578282-d43e95c4-d4f1-4a69-9f0f-ce3f649fa6b4.png)
+ 
