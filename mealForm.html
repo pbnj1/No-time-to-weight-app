@@ -51,10 +51,10 @@
 
     <main
       id="meal-form"
-      class="flex flex-wrap justify-center items-center w-screen h-screen"
+      class="flex flex-wrap justify-center items-center w-screen h-screen body-font"
     >
       <!-- modal -->
-      <div class="bg-black bg-opacity-50 absolute inset-0 hidden justify-center items-center body-font" id="mealModalOverlay">
+      <div class="bg-black bg-opacity-50 absolute inset-0 hidden justify-center items-center" id="mealModalOverlay">
         <div class="bg-gray-200 max-w-sm rounded px-3 py-3 shadow-xl">
           <div class="flex justify-between">
             <h3 class="test-lg font-bold header-font">Looks like you skipped a step!</h3>
@@ -64,7 +64,7 @@
             <p>Before we can generate a suggested meal plan, we need to calculate your BMR. Click Ok to head to the appropriate page.</p>
           </div>
           <div class="mt-3 flex justify-center space-x-12">
-            <button class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-700" id="modalOkButton">Ok</button>
+            <button class="px-3 py-1 rounded" id="modalOkButton">Ok</button>
           </div>
         </div>
       </div>
@@ -310,7 +310,7 @@
               <div class="flex items-center justify-center">
                 <button
                   id="mealBtn"
-                  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  class="font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   type="button"
                 >
                   Submit
@@ -324,7 +324,7 @@
     </div>
   <div class="w-full flex justify-end px-10">
     <button
-      class="m-28 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline h-16 w-56 text-3xl"
+      class="font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline h-16 w-56 text-3xl"
       type="button"
       id="activityNxBtn"
     >

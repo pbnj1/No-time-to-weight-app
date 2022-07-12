@@ -13,6 +13,23 @@ body {
     background-color: var(--background-color);
 }
 
+main a {
+    color: var(--color-4);
+}
+
+main a:hover {
+    color: var(--base-color);
+}
+
+main button, #modalContinueButton {
+    background-color: var(--color-4);
+    color: black;
+}
+
+main button:hover, #modalContinueButton:hover {
+    background-color: var(--base-color);
+}
+
 .header-font {
     font-family: var(--header-font);
 }
