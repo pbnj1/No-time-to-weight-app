@@ -121,6 +121,7 @@ function renderMeals(data) {
     div.appendChild(divContent)
 
 
+    
     //create specific elements for img div and content div respectivly
     var img = document.createElement("img");
     var h1 = document.createElement("h1");
