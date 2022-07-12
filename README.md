@@ -34,3 +34,7 @@ Javascript, HTML, Jquery
 
 ## Link to Deployed Application
  https://pbnj1.github.io/No-time-to-weight-app/
+ 
+## Screenshot of the application landing page
+
+![Screen Shot 2022-07-12 at 12 56 27 PM](https://user-images.githubusercontent.com/105159702/178578282-d43e95c4-d4f1-4a69-9f0f-ce3f649fa6b4.png)
