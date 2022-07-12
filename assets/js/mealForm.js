@@ -9,7 +9,7 @@ var snackVal = document.querySelector('input[id = "snack-amt"]');
 var mealBtn = document.getElementById("mealBtn");
 var activityBtn = document.getElementById("activityNxBtn")
 
-var key = "1b1f372e75414ed489b35a3ecbbf7187";
+var key = "cad842599f3d443fb979be703d616546";
 
 
 
@@ -121,6 +121,7 @@ function renderMeals(data) {
     div.appendChild(divContent)
 
 
+    
     //create specific elements for img div and content div respectivly
     var img = document.createElement("img");
     var h1 = document.createElement("h1");
@@ -128,7 +129,7 @@ function renderMeals(data) {
 
     // assign pieces of content values
     h1.textContent = recipe.title;
-    p.textContent = "testp"
+    p.textContent = "Calories: " + data.results[i].nutrition.nutrients[0].amount + " kcal"
     img.src = recipe.image
 
     
