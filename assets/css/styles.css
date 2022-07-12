@@ -80,11 +80,11 @@
     margin-left: 50px;
 }
 
-.demo-wrap{
+.background-img{
     position: relative;
 }
 
-.demo-wrap:after {
+.background-img:after {
     content: ' ';
     display: block;
     position: absolute;
