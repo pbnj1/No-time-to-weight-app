@@ -25,15 +25,18 @@ IF I am satisfied I can click See Your Results.
 THEN I will be presented with a summary of my information.
 
 ```
+
 ## Technology Used
 Spoonacular API:  https://spoonacular.com/food-api
 Calorie API: https://api-ninjas.com/api/caloriesburned
 CSS framework - Tailwindcss: https://tailwindcss.com/
 Javascript, HTML, Jquery 
 
-
 ## Link to Deployed Application
  https://pbnj1.github.io/No-time-to-weight-app/
+
+## Description of this project
+No Time to Weight is a web application that aims to address chronic health and disease burden at the root cause by helping users improve and meal their planning and increase thier overall activity levels.  The app will guide the user through a series of questions that will collect individualized data - which will be used create a personal plan to help the user reach their bodyweight goals and recommended daily activity levels.  
  
 ## Screenshot of the application landing page
 
