@@ -70,7 +70,7 @@ function exSearch() {
     .then(function (data) {
        
 
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 3; i++) {
        
         if ((data.length === 0)) {
           var displayMessage = document.createElement("p");
@@ -101,6 +101,8 @@ function exSearch() {
         card1.append(exercise1);
       }
     });
+
+    console
 }
 
 exBTN.addEventListener("click", exSearch);
