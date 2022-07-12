@@ -25,3 +25,12 @@ IF I am satisfied I can click See Your Results.
 THEN I will be presented with a summary of my information.
 
 ```
+## Technology Used
+Spoonacular API:  https://spoonacular.com/food-api
+Calorie API: https://api-ninjas.com/api/caloriesburned
+CSS framework - Tailwindcss: https://tailwindcss.com/
+Javascript, HTML, Jquery 
+
+
+## Link to Deployed Application
+ https://pbnj1.github.io/No-time-to-weight-app/
