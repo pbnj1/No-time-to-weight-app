@@ -69,14 +69,13 @@ function exSearch() {
     })
     .then(function (data) {
        
-
+      let counter = 1;
       for (let i = 0; i < 3; i++) {
-       
         if ((data.length === 0)) {
           var displayMessage = document.createElement("p");
           displayMessage.setAttribute(
             "class",
-            "flex items-center justify-center w-full h-1/4 border-2 border-black ml-2 mt-6 mr-2 mb-2"
+            "flex items-center justify-center w-full h-1/3 leading-relaxed"
           );
           displayMessage.textContent =
             "We couldn't find that exercise!  Please try again.";
@@ -88,10 +87,10 @@ function exSearch() {
         var exercise1 = document.createElement("p");
         exercise1.setAttribute(
           "class",
-          "flex items-center justify-center w-full h-1/4 border-2 border-black ml-2 mt-6 mr-2 mb-2"
+          "w-full h-48 shadow-lg flex p-4"
         );
         exercise1.textContent =
-          "Your first suggested exercise is to " +
+          counter + '.  ' +
           data[i].name +
           ".  Great Pick! You will burn " +
           data[i].total_calories +
@@ -99,10 +98,10 @@ function exSearch() {
           val +
           " minutes!";
         card1.append(exercise1);
+        
+        counter++;
       }
     });
-
-    console
 }
 
 exBTN.addEventListener("click", exSearch);
