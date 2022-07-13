@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>No Time To Weight</title>
   </head>
-
   <body>
     <div id="mySidenav" class="sidenav header-font z-40">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
@@ -35,8 +34,7 @@
       <a href="./mealForm.html">Meal Planning</a>
       <a href="./activityForm.html">Activities</a>
     </div>
-
-    <header class="custom-header fixed z-30 w-full">
+    <header class="custom-header z-30 w-full">
       <nav class="shadow-lg h-16 header-font">
         <div class="flex justify-between ml-12 mr-12 h-full">
           <div class="flex items-center">
@@ -52,60 +50,29 @@
         </div>
       </nav>
     </header>
-
-    <main class="flex flex-wrap justify-center items-center w-screen h-screen body-font">
-      <div class="w-full h-full container mx-auto flex flex-col justify-center items-center body-font">
-        <div class="pb-5 w-full lg:w-10/12 h-10/12 shadow-xl custom-container rounded">
-          <div class="h-full w-full max-w flex justify-center items-center">
-            <form class="">
-              <div class="mb-4">
-                <div class="text-center mx-auto h-2/12 w-12/12 py-5 header-font text-4xl">
-                  <h1>
-                    Activity Form
-                  </h1>
-                </div>
-                <label
-                  class="block text-gray-700 text-sm font-bold mb-2"
-                  for="exerciseSearch"
-                >
-                  Exercise
-                </label>
-                <input
-                  id="ex-choice"
-                  class="input-border rounded"
-                  type="text"
-                  placeholder="Ex. Run"
-                />
-              </div>
-              <div id="slider" class="mb-12 mt-12">
-                <label
-                  for="default-range"
-                  class="block text-gray-500 text-sm font-bold mb-2 p-6"
-                  >Duration in minutes</label
-                >
-                <div id="custom-handle" class="ui-slider-handle"></div>
-              </div>
-              <div class="flex items-center justify-center">
-                <button
-                  id="exBTN"
-                  class="font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                  type="button"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
+    <main class="w-full h-full">
+      <div class="w-full h-full container my-5 mx-auto flex justify-center items-center body-font flex-col">
+        <form id="activity-form" class="rounded my-auto w-10/12 h-10/12 z-20 shadow-xl custom-container">
+          <div class="text-center mx-auto h-2/12 w-full py-5 header-font text-4xl">
+            <h1>Activity Form</h1>
           </div>
-        </div>
-        <div class="mt-10 flex flex-wrap w-full lg:w-10/12 h-10/12 shadow-xl custom-container rounded" id="suggestions"></div>
+          <div class="text-center mx-auto h-8/12 w-full max-w-xs py-10 text-2xl md:text-2xl lg:text-3xl leading-relaxed">
+            <label class="block" for="exerciseSearch">Exercise:</label>
+            <input id="ex-choice" class="input-border rounded" type="text" placeholder="Ex. Run" required/>
+            <br><br>
+            <label class="block" for="exerciseSearch">Time:</label>
+            <div id="slider" class="my-4">
+              <div id="custom-handle" class="block ui-slider-handle"></div>
+            </div>
+            <label for="default-range" class="block text-gray-500 text-sm font-bold mb-1 p-0">Duration in minutes</label>
+          </div>
+          <div class="h-2/12 w-full mx-auto flex justify-center items-center py-5 section-footer">
+            <button class="font-bold py-2 px-20 rounded focus:outline-none focus:shadow-outline" type="submit">Submit</button>
+          </div>
+        </form>
+        <div class="mt-10 flex flex-wrap w-full lg:w-10/12 h-10/12 shadow-xl custom-container rounded text-center mx-auto header-font text-4xl" id="suggestions"></div>
         <div class="h-2/12 w-12/12 mx-auto flex justify-center items-center py-5">
-          <button
-            class="font-bold py-2 px-20 rounded focus:outline-none focus:shadow-outline"
-            type="button"
-            id="activityNextPageBtn"
-          >
-            Next Page
-          </button>
+          <button class="font-bold py-2 px-20 rounded focus:outline-none focus:shadow-outline" type="button" id="activityNextPageBtn">Next Page</button>
         </div>
       </div>
     </main>
