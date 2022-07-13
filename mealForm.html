@@ -26,11 +26,11 @@
         >&times;</a
       >
       <a href="./index.html">Home</a>
-      <a href="./userForm.html">User Form</a>
+      <a href="./userForm.html">My Info</a>
       <a href="./mealForm.html">Meal Planning</a>
       <a href="./activityForm.html">Activities</a>
     </div>
-    <header class="custom-header fixed z-30 w-full">
+    <header class="custom-header z-30 w-full">
       <nav class="shadow-lg h-16 header-font">
         <div class="flex justify-between ml-12 mr-12 h-full">
           <div class="flex items-center">
@@ -46,12 +46,9 @@
         </div>
       </nav>
     </header>
-    <main
-      id="meal-form"
-      class="flex flex-wrap justify-center items-center w-screen h-screen body-font"
-    >
+    <main id="meal-form" class="w-full h-full">
       <!-- modal -->
-      <div class="bg-black bg-opacity-50 absolute inset-0 hidden justify-center items-center body-font" id="mealModalOverlay">
+      <div class="inset-0 w-full h-full z-40 bg-black bg-opacity-50 fixed hidden justify-center items-center body-font" id="mealModalOverlay">
         <div class="custom-modal max-w-sm rounded px-3 py-3 shadow-xl">
           <div class="text-center mx-auto text-xl font-bold header-font">
             <h3>Looks like you skipped a step!</h3>
@@ -64,266 +61,101 @@
           </div>
         </div>
       </div>
-      <div id="meal-container" class="lg:mt-0 w-full h-full container mx-auto flex flex-col justify-center items-center body-font">
-        <div class="pb-5 w-full lg:w-10/12 h-10/12 shadow-xl custom-container rounded">
-          <div class="h-full w-full max-w flex justify-center items-center">
-            <form
-              id="meal-input"
-            >
-              <div class="mb-4">
-                <div class="text-center mx-auto h-2/12 w-12/12 py-5 header-font text-4xl">
-                  <h1
-                  id="meal-title"
-                  >
-                    Meal Form
-                  </h1>
-                </div>
-                <label
-                  for="restrictions"
-                  class="block text-gray-700 text-sm font-bold mb-2"
-                >
-                  Special Diet Restrictions?</label
-                >
-                <input type="radio" id="yesR" name="restrictions" value="show"/>
-                <label for="show">Yes</label>
-                <input type="radio" id="noR" name="restrictions" value="hide" />
-                <label for="hide">No</label>
-                <div id="restrictions" class="flex-col">
-                  <input
-                    type="radio"
-                    id="gluten Free"
-                    name="restriction"
-                    value="gluten Free"
-                  />
-                  <label for="gluten Free">Gluten Free</label>
-
-                  <input
-                    type="radio"
-                    id="ketogenic"
-                    name="restriction"
-                    value="ketogenic"
-                  />
-                  <label for="ketogenic">Ketogenic</label>
-                  <br />
-
-                  <input
-                    type="radio"
-                    id="vegetarian"
-                    name="restriction"
-                    value="vegetarian"
-                  />
-                  <label for="vegetarian">Vegetarian</label>
-
-                  <input
-                    type="radio"
-                    id="lacto-vegetarian"
-                    name="restriction"
-                    value="lacto-vegetarian"
-                  />
-                  <label for="lacto-vegetarian">Lacto-Vegetarian</label>
-
-                  <br />
-
-                  <input
-                    type="radio"
-                    id="ovo-vegetarian"
-                    name="restriction"
-                    value="ovo-vegetarian"
-                  />
-                  <label for="ovo-vegetarian">Ovo-Vegetarian</label>
-
-                  <input
-                    type="radio"
-                    id="vegan"
-                    name="restriction"
-                    value="vegan"
-                  />
-                  <label for="vegan">Vegan</label>
-                  <br />
-
-                  <input
-                    type="radio"
-                    id="pescetarian"
-                    name="restriction"
-                    value="pescetarian"
-                  />
-                  <label for="pescetarian">Pescatarian</label>
-
-                  <input
-                    type="radio"
-                    id="paleao"
-                    name="restriction"
-                    value="paleao"
-                  />
-                  <label for="paleao">Paleo</label>
-
-                  <input
-                    type="radio"
-                    id="primal"
-                    name="restriction"
-                    value="primal"
-                  />
-                  <label for="primal">Primal</label>
-                  <br />
-
-                  <input
-                    type="radio"
-                    id="whole30"
-                    name="restriction"
-                    value="whole30"
-                  />
-                  <label for="whole30">Whole30</label>
-                </div>
-              </div>
-
-              <div class="mb-4">
-                <label
-                  for="intolerance"
-                  class="block text-gray-700 text-sm font-bold mb-2"
-                >
-                  Food Allergies/Intolerances?</label
-                >
-                <input type="radio" id="yesA" name="allergies" value="show" />
-                <label for="show">Yes</label>
-                <input type="radio" id="noA" name="allergies" value="hide" />
-                <label for="hide">No</label>
-                <div id="allergies" class="flex-col">
-                  <input
-                    type="checkbox"
-                    id="Dairy"
-                    name="intolerance"
-                    value="Dairy"
-                  />
-                  <label for="Dairy">Dairy</label>
-
-                  <input
-                    type="checkbox"
-                    id="Egg"
-                    name="intolerance"
-                    value="Egg"
-                  />
-                  <label for="Egg">Egg</label>
-
-                  <input
-                    type="checkbox"
-                    id="Gluten"
-                    name="intolerance"
-                    value="Gluten"
-                  />
-                  <label for="Gluten">Gluten</label>
-
-                  <input
-                    type="checkbox"
-                    id="Grain"
-                    name="intolerance"
-                    value="Grain"
-                  />
-                  <label for="Grain">Grain</label>
-                  <br />
-
-                  <input
-                    type="checkbox"
-                    id="Peanut"
-                    name="intolerance5"
-                    value="Peanut"
-                  />
-                  <label for="Peanut">Peanut</label>
-
-                  <input
-                    type="checkbox"
-                    id="Seafood"
-                    name="intolerance"
-                    value="Seafood"
-                  />
-                  <label for="Seafood">Seafood</label>
-
-                  <input
-                    type="checkbox"
-                    id="Sesame"
-                    name="intolerance"
-                    value="Sesame"
-                  />
-                  <label for="Sesame">Sesame</label>
-                  <br />
-
-                  <input
-                    type="checkbox"
-                    id="Shellfish"
-                    name="intolerance"
-                    value="Shellfish"
-                  />
-                  <label for="Shellfish">Shellfish</label>
-
-                  <input
-                    type="checkbox"
-                    id="Soy"
-                    name="intolerance"
-                    value="Soy"
-                  />
-                  <label for="Soy">Soy</label>
-
-                  <input
-                    type="checkbox"
-                    id="Sulfite"
-                    name="intolerance"
-                    value="Sulfite"
-                  />
-                  <label for="Sulfite">Sulfite</label>
-                  <br />
-
-                  <input
-                    type="checkbox"
-                    id="Tree Nut"
-                    name="intolerance"
-                    value="Tree Nut"
-                  />
-                  <label for="Tree Nut">Tree Nut</label>
-
-                  <input
-                    type="checkbox"
-                    id="Wheat"
-                    name="intolerance"
-                    value="Wheat"
-                  />
-                  <label for="Wheat">Wheat</label>
-                </div>
-              </div>
-
-              <div class="mb-4">
-                <label
-                  class="block text-gray-700 text-sm font-bold mb-2"
-                  for="Meals"
-                  >Meals Per Day ?</label
-                >
-                <input type="number" min = "0" class="input-border rounded" id="meal-amt" />
-                <label
-                  for="default-range"
-                  class="block text-gray-500 text-sm font-bold mb-1 p-0"
-                  >Input must be 1-6</label
-                >
-              </div>
-
-              <div class="flex items-center justify-center">
-                <button
-                  id="mealBtn"
-                  class="font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                  type="button"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
+      <div id="meal-container" class="w-full h-full container my-5 mx-auto flex justify-center items-center body-font flex-col">
+        <form id="meal-input" class="rounded my-auto w-10/12 h-10/12 z-20 shadow-xl custom-container">
+          <div class="text-center mx-auto h-2/12 w-full py-5 header-font text-4xl">
+            <h1 id="meal-title"> Meal Planning</h1>
           </div>
-        </div>
+          <div class="text-center mx-auto h-8/12 w-full py-10 text-2xl md:text-2xl lg:text-3xl leading-relaxed">
+            <div>
+              <!-- Special Diet Restrictions? -->
+              <label for="restrictions" class="block">Special Diet Restrictions?</label>
+              <input type="radio" id="yesR" name="restrictions" value="show"/>
+              <label for="show">Yes</label>
+              <input type="radio" id="noR" name="restrictions" value="hide" />
+              <label for="hide">No</label>
+              <br>
+              <div id="restrictions" class="mt-4 flex-col text-lg md:text-lg lg:text-xl leading-relaxed">
+                <input type="radio" id="gluten Free" name="restriction" value="gluten Free"/>
+                <label for="gluten Free">Gluten Free</label>
+                <input type="radio" id="ketogenic" name="restriction" value="ketogenic"/>
+                <label for="ketogenic">Ketogenic</label>
+                <br/>
+                <input type="radio" id="vegetarian" name="restriction" value="vegetarian"/>
+                <label for="vegetarian">Vegetarian</label>
+                <input type="radio" id="lacto-vegetarian" name="restriction" value="lacto-vegetarian"/>
+                <label for="lacto-vegetarian">Lacto-Vegetarian</label>
+                <br/>
+                <input type="radio" id="ovo-vegetarian" name="restriction" value="ovo-vegetarian"/>
+                <label for="ovo-vegetarian">Ovo-Vegetarian</label>
+                <input type="radio" id="vegan" name="restriction" value="vegan"/>
+                <label for="vegan">Vegan</label>
+                <br/>
+                <input type="radio" id="pescetarian" name="restriction" value="pescetarian"/>
+                <label for="pescetarian">Pescatarian</label>
+                <input type="radio" id="paleao" name="restriction" value="paleao"/>
+                <label for="paleao">Paleo</label>
+                <input type="radio" id="primal" name="restriction" value="primal"/>
+                <label for="primal">Primal</label>
+                <br/>
+                <input type="radio" id="whole30" name="restriction" value="whole30"/>
+                <label for="whole30">Whole30</label>
+              </div>
+            </div>
+            <br>
+            <div>
+              <!-- Food Allergies and Intolerances? -->
+              <label for="intolerance" class="block">Food Allergies/Intolerances?</label>
+              <input type="radio" id="yesA" name="allergies" value="show" />
+              <label for="show">Yes</label>
+              <input type="radio" id="noA" name="allergies" value="hide" />
+              <label for="hide">No</label>
+              <br>
+              <div id="allergies" class="mt-4 flex-col text-lg md:text-lg lg:text-xl leading-relaxed">
+                <input type="checkbox" id="Dairy" name="intolerance" value="Dairy"/>
+                <label for="Dairy">Dairy</label>
+                <input type="checkbox" id="Egg" name="intolerance" value="Egg"/>
+                <label for="Egg">Egg</label>
+                <input type="checkbox" id="Gluten" name="intolerance" value="Gluten"/>
+                <label for="Gluten">Gluten</label>
+                <input type="checkbox" id="Grain" name="intolerance" value="Grain"/>
+                <label for="Grain">Grain</label>
+                <br/>
+                <input type="checkbox" id="Peanut" name="intolerance5" value="Peanut"/>
+                <label for="Peanut">Peanut</label>
+                <input type="checkbox" id="Seafood" name="intolerance" value="Seafood"/>
+                <label for="Seafood">Seafood</label>
+                <input type="checkbox" id="Sesame" name="intolerance" value="Sesame"/>
+                <label for="Sesame">Sesame</label>
+                <br/>
+                <input type="checkbox" id="Shellfish" name="intolerance" value="Shellfish"/>
+                <label for="Shellfish">Shellfish</label>
+                <input type="checkbox" id="Soy" name="intolerance" value="Soy"/>
+                <label for="Soy">Soy</label>
+                <input type="checkbox" id="Sulfite" name="intolerance" value="Sulfite"/>
+                <label for="Sulfite">Sulfite</label>
+                <br/>
+                <input type="checkbox" id="Tree Nut" name="intolerance" value="Tree Nut"/>
+                <label for="Tree Nut">Tree Nut</label>
+                <input type="checkbox" id="Wheat" name="intolerance" value="Wheat"/>
+                <label for="Wheat">Wheat</label>
+              </div>
+              <br>
+            </div>
+            <div>
+              <!-- Meals per day? -->
+              <label class="block" for="Meals">Meals Per Day ?</label>
+              <input type="number" min = "0" class="input-border rounded" id="meal-amt" />
+              <label for="default-range" class="block text-gray-500 text-sm font-bold mb-1 p-0">Input must be 1-6</label>
+            </div>
+          </div>
+          <div class="h-2/12 w-full mx-auto flex justify-center items-center py-5 section-footer">
+            <button id="mealBtn" class="font-bold py-2 px-20 rounded focus:outline-none focus:shadow-outline" type="button">Get Meals</button>
+          </div>
+        </form>
         <div class="mt-10 flex flex-wrap w-full lg:w-10/12 h-10/12 shadow-xl custom-container rounded" id="meal-suggestions"></div>
         <div class="h-2/12 w-12/12 mx-auto flex justify-center items-center py-5">
-          <button
-            id="activityNxBtn"
-            class="font-bold py-2 px-20 rounded focus:outline-none focus:shadow-outline"
-            type="button"
-          >
-            Get Activities
-          </button>
+          <button id="activityNxBtn" class="font-bold py-2 px-20 rounded focus:outline-none focus:shadow-outline" type="button">Next Step</button>
         </div>
       </div>
     </main>

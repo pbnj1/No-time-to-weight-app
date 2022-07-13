@@ -44,14 +44,15 @@ $( function() {
 
 nextButton.addEventListener("click", gohome);
 
-function exDisplay() {
+function exDisplay(e) {
+  e.preventDefault();
   if (exVal.value === "") {
     document.getElementById("ex-choice").focus();
   } else document.getElementById("suggestions").style.display = "flex";
-         nextButton.style.display = "flex"
+    nextButton.style.display = "flex";
+  
+  exSearch();
 }
-
-exBTN.addEventListener("click", exDisplay);
 
 function exSearch() {
   $("#suggestions").empty();
@@ -104,4 +105,4 @@ function exSearch() {
     });
 }
 
-exBTN.addEventListener("click", exSearch);
+document.getElementById('activity-form').addEventListener("submit", exDisplay);

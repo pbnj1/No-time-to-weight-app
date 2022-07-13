@@ -104,7 +104,6 @@ function renderMeals(data) {
   // console.log(data.results[0].title)
   var suggestionBox = document.getElementById("meal-suggestions")
   var mealContainer = document.getElementById('meal-container');
-  mealContainer.classList.add('mt-96');
   suggestionBox.innerHTML = "";
 
   if (mealVal.value < 7) {
