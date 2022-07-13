@@ -9,7 +9,7 @@ var snackVal = document.querySelector('input[id = "snack-amt"]');
 var mealBtn = document.getElementById("mealBtn");
 var activityBtn = document.getElementById("activityNxBtn")
 
-var key = "59b01a286ffd4fcfbef4d24209142500";
+var key = "876e9a6c95694284b7cb6107cd846ea5";
 
 
 
@@ -103,6 +103,8 @@ function randomMeal(){
 function renderMeals(data) {
   // console.log(data.results[0].title)
   var suggestionBox = document.getElementById("meal-suggestions")
+  var mealContainer = document.getElementById('meal-container');
+  mealContainer.classList.add('mt-96');
   suggestionBox.innerHTML = "";
 
   if (mealVal.value < 7) {
@@ -110,7 +112,7 @@ function renderMeals(data) {
       var recipe = data.results[i];
       //Create main div for all meal suggestions styling
       var div = document.createElement("div");
-      div.classList.add("w-full", "h-48", "shadow-lg", "flex", "p-4")
+      div.classList.add("w-full", 'lg:w-1/3', "h-48", "shadow-lg", "flex", "p-4")
       suggestionBox.appendChild(div);
   
   
