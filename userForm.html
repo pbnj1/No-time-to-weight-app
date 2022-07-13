@@ -24,14 +24,14 @@
       <title>No Time To Weight</title>
   </head>
   <body>
-    <div id="mySidenav" class="sidenav header-font z-40">
+    <div id="mySidenav" class="sidenav header-font z-50">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="./index.html">Home</a>
         <a href="./userForm.html">User Form</a>
         <a href="./mealForm.html">Meal Planning</a>
         <a href="./activityForm.html">Activities</a>
     </div>
-    <header class="custom-header fixed z-30 w-full">
+    <header class="custom-header z-30 w-full">
         <nav class="shadow-lg h-16 header-font">
             <div class="flex justify-between ml-12 mr-12 h-full">
                 <div class="flex items-center">  
@@ -47,8 +47,8 @@
             </div>
         </nav>
     </header>
-    <main class="w-screen h-screen">
-        <div class="bg-black bg-opacity-50 absolute inset-0 hidden justify-center items-center body-font" id="modalOverlay">
+    <main class="w-full h-full">
+        <div class="inset-0 w-full h-full z-40 bg-black bg-opacity-50 fixed hidden justify-center items-center body-font" id="modalOverlay">
             <div class="custom-modal max-w-sm rounded px-3 py-3 shadow-xl">
                 <div class="text-center mx-auto text-xl font-bold header-font">
                     <h3>Congratulations!</h3>
@@ -62,12 +62,12 @@
                 </div>
             </div>
         </div>
-        <div class="w-full h-full container mx-auto flex justify-center items-center body-font">
-            <form id="user-form" class="mt-80 mb-40 sm:mt-40 md:mt-40 md:mb-20 w-10/12 h-10/12 shadow-xl custom-container rounded">
-                <div class="text-center mx-auto h-2/12 w-12/12 py-5 header-font text-4xl">
+        <div class="w-full h-full container my-5 mx-auto flex justify-center items-center body-font">
+            <form id="user-form" class="rounded my-auto w-10/12 h-10/12 z-20 shadow-xl custom-container">
+                <div class="text-center mx-auto h-2/12 w-full py-5 header-font text-4xl">
                     <h1>Getting to Know You</h1>
                 </div>
-                <div class="text-center mx-auto h-8/12 w-10/12 py-10 text-2xl md:text-2xl lg:text-3xl leading-relaxed">
+                <div class="text-center mx-auto h-8/12 w-full py-10 text-2xl md:text-2xl lg:text-3xl leading-relaxed">
                     <div>
                         <label class="block" for="name">Name:</label>
                         <input class="mt-4 input-border rounded" type="text" placeholder="First and last" name="name" id="name" required><br>
@@ -110,7 +110,7 @@
                     </div>
                     <div class="mt-4" id="goal-val"></div>
                 </div>
-                <div class="h-2/12 w-12/12 mx-auto flex justify-center items-center py-5 section-footer">
+                <div class="h-2/12 w-full mx-auto flex justify-center items-center py-5 section-footer">
                     <button id="user-form-button" class="font-bold py-2 px-20 rounded focus:outline-none focus:shadow-outline" type="submit">Submit</button>
                 </div>
             </form>
