@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Meal Planning</title>
   </head>
-
   <body>
     <div id="mySidenav" class="sidenav header-font z-40">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
@@ -31,7 +30,6 @@
       <a href="./mealForm.html">Meal Planning</a>
       <a href="./activityForm.html">Activities</a>
     </div>
-
     <header class="custom-header fixed z-30 w-full">
       <nav class="shadow-lg h-16 header-font">
         <div class="flex justify-between ml-12 mr-12 h-full">
@@ -48,22 +46,20 @@
         </div>
       </nav>
     </header>
-
     <main
       id="meal-form"
       class="flex flex-wrap justify-center items-center w-screen h-screen body-font"
     >
       <!-- modal -->
-      <div class="bg-black bg-opacity-50 absolute inset-0 hidden justify-center items-center" id="mealModalOverlay">
-        <div class="bg-gray-200 max-w-sm rounded px-3 py-3 shadow-xl">
-          <div class="flex justify-between">
-            <h3 class="test-lg font-bold header-font">Looks like you skipped a step!</h3>
-            
+      <div class="bg-black bg-opacity-50 absolute inset-0 hidden justify-center items-center body-font" id="mealModalOverlay">
+        <div class="custom-modal max-w-sm rounded px-3 py-3 shadow-xl">
+          <div class="text-center mx-auto text-xl font-bold header-font">
+            <h3>Looks like you skipped a step!</h3>
           </div>
-          <div class="mt-2 text-gray-900">
+          <div class="my-4 text-gray-900">
             <p>Before we can generate a suggested meal plan, we need to calculate your BMR. Click Ok to head to the appropriate page.</p>
           </div>
-          <div class="mt-3 flex justify-center space-x-12">
+          <div class="mt-4 flex justify-center space-x-12">
             <button class="px-3 py-1 rounded" id="modalOkButton">Ok</button>
           </div>
         </div>
@@ -319,18 +315,17 @@
             </form>
           </div>
         </div>
-        <div class="w-full h-48 border-2 border-black shadow-xl flex flex-wrap" id="meal-suggestions">
+        <div class="w-full h-48 border-2 border-black shadow-xl flex flex-wrap" id="meal-suggestions"></div>
       </div>
-    </div>
-  <div class="w-full flex justify-end px-10">
-    <button
-      class="font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline h-16 w-56 text-3xl"
-      type="button"
-      id="activityNxBtn"
-    >
-      Get Activities
-    </button>
-    </div>
+      <div class="w-full flex justify-end px-10">
+        <button
+          class="font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline h-16 w-56 text-3xl"
+          type="button"
+          id="activityNxBtn"
+        >
+          Get Activities
+        </button>
+      </div>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
