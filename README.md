@@ -14,29 +14,24 @@ https://docs.github.com/en/repositories/creating-and-managing-repositories/cloni
 ## Usage
 
 1. On the landing page you will be prompted to start your journey
-```md
+
 ![get started button with vegetables in the background](assets/images/landingPage.png)
-```
 
 2. After clicking on the getting started button you will be prompted to enter some data that will be used to calculate your individualized metabolic rate and help you set goals. 
-```md
+
 ![form to input user information](assets/images/gettingToKnowYou.png)
-```
 
 3. Next you will choose from a list of diet restriction and allergies if applicable, as well as how many meals per day you eat.  
-```md
+
 ![form to input meal choices](assets/images/mealForm.png)
-```
 
 4 Next you will choose what type of exercise you would like to perform and for what duration to determine how that will impact your overall caloric expenditure. 
-```md
-![form to input exercise choices](assets/images/activitylForm.png)
-```
+
+![form to input exercise choices](assets/images/activityForm.png)
 
 5. Finally you will reach a summary page where you will get a description of your goal, the calories you should consume and use through exercise to meet your goals and a timeframe that this will happen in.   
-```md
+
 ![form to input meal choices](assets/images/summaryPage.png)
-```
 
 ## Credits
 Dalian Grullon
