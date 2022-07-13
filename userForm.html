@@ -23,9 +23,7 @@
       />
       <title>No Time To Weight</title>
   </head>
-
   <body>
-        
     <div id="mySidenav" class="sidenav header-font z-40">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="./index.html">Home</a>
@@ -33,24 +31,7 @@
         <a href="./mealForm.html">Meal Planning</a>
         <a href="./activityForm.html">Activities</a>
     </div>
-        
-    <div class="bg-black bg-opacity-50 absolute inset-0 hidden justify-center items-center body-font" id="modalOverlay">
-        <div class="bg-gray-200 max-w-sm rounded px-3 py-3 shadow-xl">
-          <div class="flex justify-between">
-            <h3 class="test-lg font-bold header-font">Congratulations!</h3>
-            
-          </div>
-          <div class="mt-2 text-gray-900">
-            <p>You've just completed the first big step, good job! Now press continue if you're ready to move on to the next step.</p>
-          </div>
-          <div class="mt-3 flex justify-center space-x-12">
-            <button class="bg-gray-500 text-white px-3 py-1 rounded hover:bg-gray-600" id="modalCloseButton">Cancel</button>
-            <button class="px-3 py-1 rounded" id="modalContinueButton">Continue</button>
-          </div>
-        </div>
-      </div>
-
-      <header class="custom-header fixed z-30 w-full">
+    <header class="custom-header fixed z-30 w-full">
         <nav class="shadow-lg h-16 header-font">
             <div class="flex justify-between ml-12 mr-12 h-full">
                 <div class="flex items-center">  
@@ -64,9 +45,23 @@
                     >
                 </div>
             </div>
-          </nav>
-      </header>
-      <main class="flex justify-center items-center w-screen h-screen">
+        </nav>
+    </header>
+    <main class="flex justify-center items-center w-screen h-screen">
+        <div class="bg-black bg-opacity-50 absolute inset-0 hidden justify-center items-center body-font" id="modalOverlay">
+            <div class="custom-modal max-w-sm rounded px-3 py-3 shadow-xl">
+                <div class="text-center mx-auto text-xl font-bold header-font">
+                    <h3 class="">Congratulations!</h3>
+                </div>
+                <div class="my-4 text-gray-900">
+                    <p>You've just completed the first big step, good job! Now press continue if you're ready to move on to the next step.</p>
+                </div>
+                <div class="mt-4 flex justify-center space-x-12">
+                    <button class="bg-gray-500 text-white px-3 py-1 rounded hover:bg-gray-600" id="modalCloseButton">Cancel</button>
+                    <button class="px-3 py-1 rounded" id="modalContinueButton">Continue</button>
+                </div>
+            </div>
+        </div>
         <form id="user-form" class="w-8/12 h-4/6 border-2 border-black body-font">
             <div class="h-1/6 w-11/12 mx-auto flex justify-center items-center header-font">
                 <h1 class="text-5xl text-center">Getting to Know You</h1>
@@ -116,8 +111,8 @@
                 <button id="user-form-button" class="font-bold py-2 px-20 rounded focus:outline-none focus:shadow-outline" type="submit">Submit</button>
             </div>
         </form>
-      </main>
-      <script src="./assets/js/script.js"></script>
-      <script src="./assets/js/userForm.js"></script>
+    </main>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/userForm.js"></script>
   </body>     
 </html>

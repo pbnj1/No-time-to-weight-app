@@ -13,6 +13,10 @@ body {
     background-color: var(--background-color);
 }
 
+.custom-modal {
+    background-color: var(--background-color);
+}
+
 .custom-header {
     border-bottom: solid var(--color-3) 1px;
 }
