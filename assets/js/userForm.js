@@ -49,7 +49,14 @@ function updateUserObject(e){
     let userBMRInfo = getBMR();
     let dietCal = getDietCal(userBMRInfo);
     let exerciseCal = 300;
-    let deficit = (userBMRInfo - dietCal) + exerciseCal;
+    let deficit = 0;
+
+    if (userData.goal[0] === 'lose') {
+        deficit = (userBMRInfo - dietCal) + exerciseCal;
+    } else if (userData.goal[0] === 'gain') {
+        deficit = (userBMRInfo - dietCal) - exerciseCal;
+    }
+
     let goalTime = calcGoalTime(deficit);
 
     userData.BMR = userBMRInfo;
@@ -117,7 +124,7 @@ function getDietCal(userBMR) {
         dietCal = userBMR - 200;
         return dietCal;
     } else if (userData.goal[0] === 'gain') {
-        dietCal = userBMR + 800;
+        dietCal = userBMR - 800;
         return dietCal;
     } else {
         dietCal = userBMR + 300;
