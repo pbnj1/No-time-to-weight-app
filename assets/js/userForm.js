@@ -23,6 +23,7 @@ function addGoalValue() {
             goalVal.setAttribute('type', 'number');
             goalValEl.append(goalVal);
             goalVal.classList.remove('hidden');
+            goalVal.classList.add('input-border', 'rounded');
             goalVal.value = '';
         } else if (goalButtons[i].checked && (goalButtons[i].value === 'maintain')) {
             goalVal.value = 0;

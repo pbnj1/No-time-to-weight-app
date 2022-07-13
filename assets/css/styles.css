@@ -26,6 +26,10 @@ body {
     background-color: var(--background-color);
 }
 
+.input-border {
+    border: solid var(--color-3) 1px;
+}
+
 .section-footer {
     background-color: var(--color-3);
 }
